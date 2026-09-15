@@ -1,6 +1,8 @@
 # Ilianna's CART253 Website
 
-## [Journal Entries](journal.md) [Prototypes](prototypes.md)
+## [Journal Entries](journal.md)
+
+## [Prototypes](prototypes.md)
 
 ![Banner](topics\version-control\version-control-workflow\images\Banner.png)
 
