@@ -2,7 +2,4 @@
 
 ![Banner](topics\version-control\version-control-workflow\images\Banner.png)
 
-This is Ilianna’s coursework repository for CART253
-This is me editing the README file.
-I don't know what to say...
-:)
+This is Ilianna’s website for CART253! The purpose of this website is to compile all documentation of any and all projects from my time in the CART253 course, during the Fall 2026 semester at Concordia University. This website will help me to share my progress with others and allow me to easily look back on my work in the future.
