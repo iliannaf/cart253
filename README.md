@@ -1,6 +1,6 @@
 # Ilianna's CART253 Website
 
-![Banner](images\Banner.png)
+![Banner](topics\version-control\version-control-workflow\images\Banner.png)
 
 This is Ilianna’s coursework repository for CART253
 This is me editing the README file.
