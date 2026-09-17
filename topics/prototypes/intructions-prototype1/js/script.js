@@ -1,6 +1,6 @@
 /**
  * Title of Project
- * Author Name
+ * Ilianna
  * 
  * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
  * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
@@ -12,7 +12,7 @@
  * OH LOOK I DIDN'T DESCRIBE SETUP!!
 */
 function setup() {
-
+    createCanvas(640, 480);
 }
 
 
@@ -20,5 +20,5 @@ function setup() {
  * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
 */
 function draw() {
-
+    background(lightblue);
 }
