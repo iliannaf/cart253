@@ -2,13 +2,14 @@
  * My House
  * Ilianna
  * 
- * Draws a house with shapes.
+ * Draws a house using shapes.
  * 
  * Disclaimer: Not actually my house.
  * 
  * Uses:
  * p5.js
  * https://p5js.org/
+ * Code from Pippin Barr
  */
 
 /**
@@ -29,7 +30,7 @@ function draw() {
 }
 
 /**
- * Draws the sky (nice and blue)
+ * Draws the sky
  */
 function drawSky() {
 	// The sky
@@ -37,7 +38,7 @@ function drawSky() {
 }
 
 /**
- * Draws a fluffy white cloud
+ * Draws a cloud
  */
 function drawCloud() {
 	// A cloud
@@ -53,7 +54,7 @@ function drawCloud() {
 }
 
 /**
- * Draws the cold, hard ground
+ * Draws the ground
  */
 function drawGround() {
 	// The ground
@@ -65,7 +66,7 @@ function drawGround() {
 }
 
 /**
- * Draws a lovely, cosy house with a pointy roof
+ * Draws a house with a roof
  */
 function drawHouse() {
 	drawBody();
@@ -75,11 +76,10 @@ function drawHouse() {
 }
 
 /**
- * Draws the main body of our house.
- * (Is that what it's called?)
+ * Draws the bottom of the house
  */
 function drawBody() {
-	// The main body of the house
+	// The bottom of the house
 	push();
 	noStroke();
 	fill(250, 250, 200);
@@ -88,7 +88,7 @@ function drawBody() {
 }
 
 /**
- * Draws the roof of our house (a triangle)
+ * Draws the roof
  */
 function drawRoof() {
 	push();
@@ -99,7 +99,7 @@ function drawRoof() {
 }
 
 /**
- * Draws a window on our house
+ * Draws a window
  */
 function drawWindow() {
 	push();
@@ -111,7 +111,7 @@ function drawWindow() {
 }
 
 /**
- * Draws a door and a doorknob on our house
+ * Draws a door and a doorknob
  */
 function drawDoor() {
 	// The door
