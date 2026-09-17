@@ -1,9 +1,8 @@
 /**
- * Title of Project
- * Author Name
+ * Function Calls
+ * Ilianna Faoro
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Description: Week 2 stuff
  */
 
 "use strict";
