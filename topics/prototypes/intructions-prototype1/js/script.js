@@ -8,7 +8,7 @@
 "use strict";
 
 /**
- * Cretaes a canvas to work on.
+ * Creates a canvas to work on.
 */
 function setup() {
     createCanvas(800, 600);
