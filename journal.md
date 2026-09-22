@@ -10,3 +10,10 @@ Up until now, I had never used or even heard of Markdown. In the past, whenever 
 
 ## Journal Entry 2 - September 24, 2026
 
+Throughout the process of coding these three drawings, I learned a lot more about p5. I was surprised by how much I enjoyed getting to make silly little drawings using various shapes and colours. There are a lot of ways that you can customize your drawings using p5, which made the process really fun. It was also really helpful to be able to look through the P5 Reference. It allowed me to find new ways of doing things, and helped me to discover examples of things that other people have made. At first, it was a bit difficult to get the hang of using p5, especially when it came to placing things exactly where I wanted them on the canvas. However, after a while it got easier for me to understand how things worked. This better understanding of what I could do and how to do it, made me feel more confident and encouraged me to try doing new and more difficult things. I would like to continue to use p5 to create drawings and other works of art. From what I have seen so far, it seems like there are a lot of possibilities to make some cool things with p5. In the future, it would be interesting to try and figure out how to make 3D art in p5. I have seen some examples, but did not yet feel confident enough to try it out for myself.
+
+![Screenshot 2](topics/version-control/version-control-workflow/images/Diglet.png)
+
+***
+
+## Journal Entry 3 - October 1, 2026
