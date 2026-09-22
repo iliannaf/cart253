@@ -9,3 +9,4 @@ Up until now, I had never used or even heard of Markdown. In the past, whenever 
 ***
 
 ## Journal Entry 2 - September 24, 2026
+
