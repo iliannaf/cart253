@@ -2,7 +2,9 @@
 
 ### [Challenge 2: Landscape](topics/instructions-challenge/index.html)
 
-![Mt. Drew and Mt. Askew](topics/version-control/version-control-workflow/images/Landscape.png)
+<!-- ![Mt. Drew and Mt. Askew](topics/version-control/version-control-workflow/images/Landscape.png) -->
+
+<img src="topics/version-control/version-control-workflow/images/Landscape.png" alt="Mt. Drew and Mt. Askew" width="300">
 
 ---
 
