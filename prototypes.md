@@ -17,6 +17,6 @@
 ![Randomness](topics/version-control/version-control-workflow/images/Randomness.png)
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/intructions-prototype3/js/script.js)
 
-***
+---
 
 ## Week 3

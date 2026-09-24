@@ -6,7 +6,7 @@ Up until now, I had never used or even heard of Markdown. In the past, whenever 
 
 ![Screenshot 1](topics\version-control\version-control-workflow\images\Screenshot1.png)
 
-***
+---
 
 ## Journal Entry 2 - September 24, 2026
 
@@ -14,6 +14,6 @@ Throughout the process of coding these three drawings, I learned a lot more abou
 
 ![Screenshot 2](topics/version-control/version-control-workflow/images/Diglet.png)
 
-***
+---
 
 ## Journal Entry 3 - October 1, 2026
