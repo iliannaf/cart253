@@ -2,15 +2,13 @@
 
 ### [Challenge 2: Landscape](topics/instructions-challenge/index.html)
 
-<!-- ![Mt. Drew and Mt. Askew](topics/version-control/version-control-workflow/images/Landscape.png) -->
-
-<img src="topics/version-control/version-control-workflow/images/Landscape.png" alt="Mt. Drew and Mt. Askew" width="300">
+<img src="topics/version-control/version-control-workflow/images/Landscape.png" alt="Mt. Drew and Mt. Askew" width="400">
 
 ---
 
 ### [Challenge 3: Mr. Furious](topics/variables-challenge/index.html)
 
-![Mr. Furious](topics/version-control/version-control-workflow/images/Mr. Furious.png)
+<img src="topics/version-control/version-control-workflow/images/Mr. Furious.png" alt="Mr. Furious" width="400">
 
 ---
 
