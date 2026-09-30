@@ -1,6 +1,9 @@
 # Ilianna's Prototypes
 
-## Drawings - Week 2
+- [Week 2](#week-2)
+- [Week 3](#week-3)
+
+## Drawings - Week 2 {#week-2}
 
 ### [Prototype 1 - Standard Building](topics/prototypes/intructions-prototype1/index.html)
 
@@ -22,7 +25,7 @@
 
 ---
 
-## Variables - Week 3
+## Variables - Week 3 {#week-3}
 
 ### [Prototype 1 - Diglet V2](topics\prototypes\variables-prototype-1\index.html)
 
