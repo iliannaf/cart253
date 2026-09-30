@@ -1,7 +1,9 @@
 # Ilianna's Weekly Challenges
 
-#### - [Challenge 2](#challenge-2)
-#### - [Challenge 3](#challenge-3)
+### - [Challenge 2](#challenge-2)
+### - [Challenge 3](#challenge-3)
+
+---
 
 ### [Challenge 2: Landscape](topics/instructions-challenge/index.html) {#challenge-2}
 
