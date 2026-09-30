@@ -1,8 +1,8 @@
 # Ilianna's Journal Entries
 
-- [Journal 1](#journal-1)
-- [Journal 2](#journal-2)
-- [Journal 3](#journal-3)
+#### - [Journal 1](#journal-1)
+#### - [Journal 2](#journal-2)
+#### - [Journal 3](#journal-3)
 
 ## Journal Entry 1 - September 17, 2026 {#journal-1}
 
