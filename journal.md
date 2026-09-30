@@ -21,3 +21,7 @@ Throughout the process of coding these three drawings, I learned a lot more abou
 ---
 
 ## Journal Entry 3 - October 1, 2026 {#journal-3}
+
+While making these prototypes, I learned more about using variables in P5.js. Variables can be used to easily change values in the code, especially numbers that repeat many times throughout the code. For example, in my "Diglet V2" prototype, instead of typing the number 585 every time I made a new rock, I created a variable to represent the Y position of the rocks. Whenever I wanted to change the position of the rocks, instead of having to retype all those numbers, all I had to change was the number associated with the variable. Variables can also be used to change a specific value while the code is running. For example, in my "Bouncy Ball" prototype, I used variables to change the colour of the ball every time it hit a wall, no matter how long the code runs for. I find that variables are a bit difficult for me to understand, but it got a little easier as I kept trying things. I feel like the amount of things you can do with the variables is a bit overwhelming. Despite being a bit confusing, I think that variables create a lot of opportunities to create a lot of cool things. I hope other people feel happy seeing my prototypes, because I find them to be pretty amusing. In the future, I'd like to make it so that my "Diglet V2" prototype can move back down after it comes up out of the ground. 
+
+<img src="topics\version-control\version-control-workflow\images\Penguin Friend.png" alt="Screenshot 3" width="400">
