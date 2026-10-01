@@ -4,6 +4,8 @@
 
 ### - [Week 3](#week-3)
 
+### - [Week 3](#week-4)
+
 ---
 
 ## Drawings - Week 2 {#week-2}
@@ -50,8 +52,10 @@
 
 ---
 
-## Conditionals - Week 4
+## Conditionals - Week 4 {#week-4}
 
 ### [Prototype 1 - Hockey Game](topics/prototypes/conditionals-prototype-1/index.html)
 
 <img src="topics/version-control/version-control-workflow/images/Hockey Game.png" alt="Hockey Game" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/conditionals-prototype-1/js/script.js)
