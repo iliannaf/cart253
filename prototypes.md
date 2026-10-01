@@ -1,6 +1,7 @@
 # Ilianna's Prototypes
 
 ### - [Week 2](#week-2)
+
 ### - [Week 3](#week-3)
 
 ---
@@ -49,4 +50,8 @@
 
 ---
 
-## Week 4
+## Conditionals - Week 4
+
+### [Prototype 1 - Hockey Game](topics/prototypes/conditionals-prototype-1/index.html)
+
+<img src="topics/version-control/version-control-workflow/images/Hockey Game.png" alt="Hockey Game" width="400">
