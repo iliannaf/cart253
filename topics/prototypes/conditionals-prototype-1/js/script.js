@@ -24,7 +24,7 @@ const user = {
   x: undefined, // will be mouseX
   y: undefined, // will be mouseY
   size: 75,
-  fill: "red",
+  fill: "purple",
 };
 
 const target = {
@@ -38,11 +38,12 @@ const target2 = {
   x: rink.width * 0.02,
   y: rink.height * 0.5,
   size: 125,
-  fill: "blue",
+  fill: "red",
 };
 
 let score1;
 let score2;
+let BGcolour;
 
 /**
  * Create the canvas
@@ -57,7 +58,8 @@ function setup() {
  * Move the user circle, check for overlap, draw the two circles
  */
 function draw() {
-  background("#aaaaaa");
+  BGcolour = "#aaaaaa";
+  background(BGcolour);
   line(rink.width / 2, 0, rink.width / 2, rink.height);
   textSize(18);
   text("Team 1:", rink.width * 0.04, rink.height * 0.05);
@@ -86,6 +88,7 @@ function draw() {
   //Check Goal
   checkGoal();
   checkGoal2();
+  win();
 
   // Draw the user and puck and target
   drawUser();
@@ -189,6 +192,13 @@ function checkGoal2() {
     puck.y = rink.height / 2;
     score2++;
   } else {
-    target2.fill = "blue";
+    target2.fill = "red";
+  }
+}
+
+function win() {
+  if (score1 === 5 || score2 === 5) {
+    score1 = 0;
+    score2 = 0;
   }
 }
