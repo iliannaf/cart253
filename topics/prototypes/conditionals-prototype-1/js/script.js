@@ -55,7 +55,7 @@ function setup() {
 }
 
 /**
- * Move the user circle, check for overlap, draw the two circles
+ * Move the user circle, check for overlap, draw the two circles, draw a decorative line, add text for scores
  */
 function draw() {
   BGcolour = "#aaaaaa";
@@ -85,12 +85,12 @@ function draw() {
     puck.fill = "black";
   }
 
-  //Check Goal
+  //Check Goal and if someone wins
   checkGoal();
   checkGoal2();
   win();
 
-  // Draw the user and puck and target
+  // Draw the user and puck and targets
   drawUser();
   drawPuck();
   drawTarget();
@@ -128,7 +128,7 @@ function drawPuck() {
 }
 
 /**
- * Displays the Target circle
+ * Displays the Target circles
  */
 function drawTarget() {
   push();
@@ -162,7 +162,7 @@ function movePuck() {
   }
 }
 
-// Check for Goal
+// Check for Goal and update score
 
 function checkGoal() {
   // Calculate distance between circles' centres
@@ -196,6 +196,7 @@ function checkGoal2() {
   }
 }
 
+// update score
 function win() {
   if (score1 === 5 || score2 === 5) {
     score1 = 0;
