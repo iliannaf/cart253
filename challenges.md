@@ -1,7 +1,10 @@
 # Ilianna's Weekly Challenges
 
 ### - [Challenge 2](#challenge-2)
+
 ### - [Challenge 3](#challenge-3)
+
+### - [Challenge 4](#challenge-4)
 
 ---
 
@@ -17,4 +20,4 @@
 
 ---
 
-### Challenge 4
+### [Challenge 4: Puck and Target](topics/conditionals-challenge/index.html) {#challenge-4}
