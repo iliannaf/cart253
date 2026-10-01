@@ -8,9 +8,14 @@
 
 "use strict";
 
+const rink = {
+  width: 900,
+  height: 500,
+};
+
 const puck = {
-  x: 450,
-  y: 250,
+  x: rink.width / 2,
+  y: rink.height / 2,
   size: 60,
   fill: "black",
 };
@@ -23,15 +28,15 @@ const user = {
 };
 
 const target = {
-  x: 880,
-  y: 250,
+  x: rink.width * 0.98,
+  y: rink.height * 0.5,
   size: 125,
   fill: "blue",
 };
 
 const target2 = {
-  x: 20,
-  y: 250,
+  x: rink.width * 0.02,
+  y: rink.height * 0.5,
   size: 125,
   fill: "blue",
 };
@@ -40,7 +45,7 @@ const target2 = {
  * Create the canvas
  */
 function setup() {
-  createCanvas(900, 500);
+  createCanvas(rink.width, rink.height);
 }
 
 /**
@@ -48,7 +53,7 @@ function setup() {
  */
 function draw() {
   background("#aaaaaa");
-  line(450, 0, 450, 500);
+  line(rink.width / 2, 0, rink.width / 2, rink.height);
 
   // Move user circle
   moveUser();
@@ -154,8 +159,8 @@ function checkGoal() {
   const overlap = d < target.size / 2 + puck.size / 2;
   // Set fill based on whether they overlap
   if (overlap) {
-    puck.x = 450;
-    puck.y = 250;
+    puck.x = rink.width / 2;
+    puck.y = rink.height / 2;
   } else {
     target.fill = "blue";
   }
@@ -169,8 +174,8 @@ function checkGoal2() {
   const overlap = d < target2.size / 2 + puck.size / 2;
   // Set fill based on whether they overlap
   if (overlap) {
-    puck.x = 450;
-    puck.y = 250;
+    puck.x = rink.width / 2;
+    puck.y = rink.height / 2;
   } else {
     target2.fill = "blue";
   }
