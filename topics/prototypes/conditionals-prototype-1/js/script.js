@@ -11,7 +11,7 @@
 const puck = {
   x: 450,
   y: 250,
-  size: 80,
+  size: 60,
   fill: "black",
 };
 
@@ -23,7 +23,14 @@ const user = {
 };
 
 const target = {
-  x: 850,
+  x: 880,
+  y: 250,
+  size: 125,
+  fill: "blue",
+};
+
+const target2 = {
+  x: 20,
   y: 250,
   size: 125,
   fill: "blue",
@@ -41,6 +48,7 @@ function setup() {
  */
 function draw() {
   background("#aaaaaa");
+  line(450, 0, 450, 500);
 
   // Move user circle
   moveUser();
@@ -55,7 +63,6 @@ function draw() {
   const overlap = d < user.size / 2 + puck.size / 2;
   // Set fill based on whether they overlap
   if (overlap) {
-    puck.fill = "yellow";
     movePuck();
   } else {
     puck.fill = "black";
@@ -63,11 +70,13 @@ function draw() {
 
   //Check Goal
   checkGoal();
+  checkGoal2();
 
   // Draw the user and puck and target
   drawUser();
   drawPuck();
   drawTarget();
+  drawTarget2();
 }
 
 /**
@@ -111,19 +120,27 @@ function drawTarget() {
   pop();
 }
 
+function drawTarget2() {
+  push();
+  noStroke();
+  fill(target2.fill);
+  ellipse(target2.x, target2.y, target2.size);
+  pop();
+}
+
 //Part 2 - Move the puck
 function movePuck() {
   //Do Left Right Movement
   if (user.x >= puck.x) {
-    puck.x -= 1;
+    puck.x -= 2;
   } else if (user.x <= puck.x) {
-    puck.x += 1;
+    puck.x += 2;
   }
   // Do Up Down Movement
   if (user.y >= puck.y) {
-    puck.y -= 1;
+    puck.y -= 2;
   } else if (user.y <= puck.y) {
-    puck.y += 1;
+    puck.y += 2;
   }
 }
 
@@ -137,8 +154,24 @@ function checkGoal() {
   const overlap = d < target.size / 2 + puck.size / 2;
   // Set fill based on whether they overlap
   if (overlap) {
-    target.fill = "green";
+    puck.x = 450;
+    puck.y = 250;
   } else {
     target.fill = "blue";
+  }
+}
+
+function checkGoal2() {
+  // Calculate distance between circles' centres
+  const d = dist(puck.x, puck.y, target2.x, target2.y);
+  // Check if that distance is smaller than their two radii,
+  // because if it is, they are overlapping
+  const overlap = d < target2.size / 2 + puck.size / 2;
+  // Set fill based on whether they overlap
+  if (overlap) {
+    puck.x = 450;
+    puck.y = 250;
+  } else {
+    target2.fill = "blue";
   }
 }
