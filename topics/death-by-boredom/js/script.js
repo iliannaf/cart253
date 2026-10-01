@@ -1,8 +1,8 @@
 /**
- * Creature Loves Massage
+ * Death by Boredom
  * Pippin Barr
  * 
- * A creature that responds to mouse massage by changing colour
+ * A creature that can die of boredom...
  */
 
 "use strict";
@@ -25,7 +25,13 @@ const creature = {
     happy: "#33cc33", // Green
     angry: "#cc3333", // Red
     dead: "#777777" // Grey
-  }
+  },
+  // Is the creature alive?
+  alive: true,
+  // How bored is the creature right now?
+  boredomLevel: 0,
+  // How bored can the creature get before dying (in frames)
+  deathByBoredomThresshold: 500
 };
 
 /**
@@ -44,15 +50,21 @@ function draw() {
   checkInput();
   drawCreature();
 }
-
-
 /**
- * Creature is happy if being massaged and otherwise bored
- */
-/**
- * Creature is happy if being massaged and otherwise bored
+ * Creature is happy if being massaged and otherwise bored... sometimes to death
  */
 function checkInput() {
+    // Check if the creature is dead
+    // Which is to say if it is NOT alive
+    if (!creature.alive) {
+        // If it's dead, just stop this function here
+        // so that we don't check out massaging and so on
+        return;
+    }
+    
+    // If we get to here it means the creature IS alive (because the
+    // if-statement above didn't trigger)
+    
     // Calculate the distance between the cursor and the creature
     // and put it into a "distance" variable (using const again since
     // we won't change this again later!)
@@ -73,14 +85,16 @@ function checkInput() {
     else {
         // Otherwise the creature is bored
         creature.fill = creature.fills.bored;
+        // Increase its boredom level by one
+        creature.boredomLevel += 1;
+        // Check if the creature has died of boredom
+        if (creature.boredomLevel > creature.deathByBoredomThresshold) {
+            // Creature dies of boredom!
+            creature.alive = false;
+            // Creature turns dead coloured!
+            creature.fill = creature.fills.dead;
+        }
     }
-}
-
-/**
- * Handles the creature becoming happy
- */
-function creatureHappy() {
-    creature.fill = creature.fills.happy;
 }
 
 /**
