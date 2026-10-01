@@ -21,3 +21,5 @@
 ---
 
 ### [Challenge 4: Puck and Target](topics/conditionals-challenge/index.html) {#challenge-4}
+
+<img src="topics/version-control/version-control-workflow/images/Puck and Target.png" alt="Puck and Target" width="400">
