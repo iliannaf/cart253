@@ -41,10 +41,15 @@ const target2 = {
   fill: "blue",
 };
 
+let score1;
+let score2;
+
 /**
  * Create the canvas
  */
 function setup() {
+  score1 = 0;
+  score2 = 0;
   createCanvas(rink.width, rink.height);
 }
 
@@ -54,6 +59,11 @@ function setup() {
 function draw() {
   background("#aaaaaa");
   line(rink.width / 2, 0, rink.width / 2, rink.height);
+  textSize(18);
+  text("Team 1:", rink.width * 0.04, rink.height * 0.05);
+  text(score1, rink.width * 0.12, rink.height * 0.05);
+  text("Team 2:", rink.width * 0.85, rink.height * 0.05);
+  text(score2, rink.width * 0.93, rink.height * 0.05);
 
   // Move user circle
   moveUser();
@@ -161,6 +171,7 @@ function checkGoal() {
   if (overlap) {
     puck.x = rink.width / 2;
     puck.y = rink.height / 2;
+    score1++;
   } else {
     target.fill = "blue";
   }
@@ -176,6 +187,7 @@ function checkGoal2() {
   if (overlap) {
     puck.x = rink.width / 2;
     puck.y = rink.height / 2;
+    score2++;
   } else {
     target2.fill = "blue";
   }
