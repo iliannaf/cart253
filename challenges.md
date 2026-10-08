@@ -10,25 +10,25 @@
 
 ---
 
-### [Challenge 2: Landscape](topics/instructions-challenge/index.html) {#challenge-2}
+### [Challenge 2: Landscape](topics/weekly-challenges/instructions-challenge/index.html) {#challenge-2}
 
 <img src="topics/version-control/version-control-workflow/images/Landscape.png" alt="Mt. Drew and Mt. Askew" width="400">
 
 ---
 
-### [Challenge 3: Mr. Furious](topics/variables-challenge/index.html) {#challenge-3}
+### [Challenge 3: Mr. Furious](topics/weekly-challenges/variables-challenge/index.html) {#challenge-3}
 
 <img src="topics/version-control/version-control-workflow/images/Mr. Furious.png" alt="Mr. Furious" width="400">
 
 ---
 
-### [Challenge 4: Puck and Target](topics/conditionals-challenge/index.html) {#challenge-4}
+### [Challenge 4: Puck and Target](topics/weekly-challenges/conditionals-challenge/index.html) {#challenge-4}
 
 <img src="topics/version-control/version-control-workflow/images/Puck and Target.png" alt="Puck and Target" width="400">
 
 ---
 
-### [Challenge 5: You Lose!](topics/events-challenge/index.html) {#challenge-5}
+### [Challenge 5: You Lose!](topics/weekly-challenges/events-challenge/index.html) {#challenge-5}
 
 <img src="topics/version-control/version-control-workflow/images/You Lose!.png" alt="You Lose!" width="400">
 
