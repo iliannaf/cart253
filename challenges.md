@@ -28,9 +28,9 @@
 
 ---
 
-### [Challenge 5: You Lose!]() {#challenge-5}
+### [Challenge 5: You Lose!](topics/events-challenge/index.html) {#challenge-5}
 
-<img src="topics/version-control/version-control-workflow/images/Puck and Target.png" alt="You Lose!" width="400">
+<img src="topics/version-control/version-control-workflow/images/You Lose!.png" alt="You Lose!" width="400">
 
 ---
 
