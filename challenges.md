@@ -1,10 +1,12 @@
-# Ilianna's Weekly Challenges
+# Ilianna's Weekly Challenges {#challenges-top}
 
 ### - [Challenge 2](#challenge-2)
 
 ### - [Challenge 3](#challenge-3)
 
 ### - [Challenge 4](#challenge-4)
+
+### - [Challenge 5](#challenge-5)
 
 ---
 
@@ -26,4 +28,10 @@
 
 ---
 
-### [Challenge 5]
+### [Challenge 5: You Lose!]() {#challenge-5}
+
+<img src="topics/version-control/version-control-workflow/images/Puck and Target.png" alt="You Lose!" width="400">
+
+---
+
+### [Back to Top](#challenges-top)
