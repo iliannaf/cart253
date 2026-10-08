@@ -1,4 +1,4 @@
-# Ilianna's Prototypes
+# Ilianna's Prototypes {#prototypes-top}
 
 ### - [Week 2](#week-2)
 
@@ -71,3 +71,7 @@
 <img src="topics\version-control\version-control-workflow\images\Day and Night.png" alt="Day and Night" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/conditionals-prototype-3/js/script.js)
+
+---
+
+### [Back to Top](#prototypes-top)
