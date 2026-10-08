@@ -4,6 +4,7 @@
 ### - [Journal 2](#journal-2)
 ### - [Journal 3](#journal-3)
 ### - [Journal 4](#journal-4)
+### - [Journal 5](#journal-5)
 
 ---
 
@@ -32,3 +33,11 @@ While making these prototypes, I learned more about using variables in P5.js. Va
 ---
 
 ## Journal Entry 4 - October 8, 2026 {#journal-4}
+
+While creating this week's prototypes, I learned more about using conditionals in P5.js. I learned that they are very useful because they allow you to change things while the code is already running. Similar to variables, conditionals create new opportunities to make more complex projects. They also make it possible to make projects that are more interactive and game-like, which I think is very cool. I like that they can be used to create animations and different sequences of events. For example, when one clip or action ends, you can use an if statement to start another one. This makes it possible to have different things happen depending on what is happening in the program. As usual, it was difficult at first, but eventually I got better at not only finding ways to use conditionals, but also figuring out how to actually implement them in my code. I used conditionals to continue my Diglet sketch by using them to change Diglet's direction of motion once it gets fully out of the ground, allowing me to make a loop of it going in and out of the ground. This helped me understand how conditionals can respond to a specific situation and then cause something else to happen. Overall, I think conditionals will be a very useful tool for my future projects. I hope that in the future, I can use them to create more games, animations, and interactive projects. I am excited to experiment with them more and see what other possibilities they can create. 
+
+<img src="topics\version-control\version-control-workflow\images\Day and Night.png" alt="Screenshot 4" width="400">
+
+---
+
+## Journal Entry 5 - October 15, 2026 {#journal-5}
