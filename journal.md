@@ -8,8 +8,6 @@
 
 ### - [Journal 4](#journal-4)
 
-### - [Journal 5](#journal-5)
-
 ---
 
 ## Journal Entry 1 - September 17, 2026 {#journal-1}
