@@ -12,30 +12,35 @@ let head = {
   y: 750,
   final: 365,
   speed: 0.8,
+  direction: -1,
 };
 
 let body = {
   y: 750,
   final: 365,
   speed: 0.8,
+  direction: -1,
 };
 
 let nose = {
   y: 785,
   final: 400,
   speed: 0.8,
+  direction: -1,
 };
 
 let eyes = {
   y: 725,
   final: 340,
   speed: 0.8,
+  direction: -1,
 };
 
 let eyes2 = {
   y: 735,
   final: 330,
   speed: 0.8,
+  direction: -1,
 };
 
 /**
@@ -56,8 +61,12 @@ function draw() {
   noStroke();
   fill(161, 133, 109);
   ellipse(400, head.y, 200);
-  head.y -= head.speed;
-  head.y = constrain(head.y, head.final, 800);
+
+  head.y += head.speed * head.direction;
+
+  if (head.y <= head.final || head.y >= 750) {
+    head.direction *= -1;
+  }
   pop();
 
   // Draw the body
@@ -65,8 +74,12 @@ function draw() {
   noStroke();
   fill(161, 133, 109);
   rect(300, body.y, 200, 200);
-  body.y -= body.speed;
-  body.y = constrain(body.y, body.final, 800);
+
+  body.y += body.speed * body.direction;
+
+  if (body.y <= body.final || body.y >= 750) {
+    body.direction *= -1;
+  }
   pop();
 
   // Draw the nose
@@ -74,8 +87,12 @@ function draw() {
   noStroke();
   fill(224, 144, 211);
   ellipse(380, nose.y, 80, 50);
-  nose.y -= nose.speed;
-  nose.y = constrain(nose.y, nose.final, 800);
+
+  nose.y += nose.speed * nose.direction;
+
+  if (nose.y <= nose.final || nose.y >= 785) {
+    nose.direction *= -1;
+  }
   pop();
 
   // Draw the eyes
@@ -84,24 +101,32 @@ function draw() {
   fill(77, 75, 76);
   ellipse(360, eyes.y, 20, 40);
   ellipse(410, eyes.y, 20, 40);
-  eyes.y -= eyes.speed;
-  eyes.y = constrain(eyes.y, eyes.final, 800);
+
+  eyes.y += eyes.speed * eyes.direction;
+
+  if (eyes.y <= eyes.final) {
+    eyes.y = eyes.final;
+    eyes.direction = 1;
+  }
+
+  if (eyes.y >= 725) {
+    eyes.y = 725;
+    eyes.direction = -1;
+  }
   pop();
 
   // Finish drawing the eyes
   push();
   noStroke();
   fill(181, 181, 181);
-  ellipse(360, eyes2.y, 10, 10);
-  ellipse(410, eyes2.y, 10, 10);
-  eyes2.y -= eyes2.speed;
-  eyes2.y = constrain(eyes2.y, eyes2.final, 800);
+  ellipse(360, eyes.y - 5, 10, 10);
+  ellipse(410, eyes.y - 5, 10, 10);
+
   pop();
 
   // Draw the rocks
   push();
 
-  // Variables
   let rockY = 585;
   let rockH = random(45, 50);
   let rockH2 = random(45, 50);
@@ -123,5 +148,6 @@ function draw() {
   ellipse(340, rockY, rockH, rockW2);
   ellipse(320, rockY, rockH2, rockW);
   ellipse(300, rockY, rockH, rockW2);
+
   pop();
 }
