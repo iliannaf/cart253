@@ -24,7 +24,19 @@ function setup() {
 function draw() {
   background(200);
   fill(rC, gC, bC);
-  square(canvasW / 2, canvasH / 2, 150);
+  square(canvasW / 2, canvasH / 2, 220);
+
+  // Red circle
+  fill(255, 0, 0);
+  circle(150, 520, 80);
+
+  // Green circle
+  fill(0, 255, 0);
+  circle(300, 520, 80);
+
+  // Blue circle
+  fill(0, 0, 255);
+  circle(450, 520, 80);
 }
 
 // use functions to add, change and mix colours
@@ -62,6 +74,23 @@ function keyPressed() {
   }
 
   if (key === 'b') {
+    bAdd();
+  }
+}
+
+function mousePressed() {
+  // Red circle
+  if (dist(mouseX, mouseY, 150, 520) < 35) {
+    rAdd();
+  }
+
+  // Green circle
+  if (dist(mouseX, mouseY, 300, 520) < 35) {
+    gAdd();
+  }
+
+  // Blue circle
+  if (dist(mouseX, mouseY, 450, 520) < 35) {
     bAdd();
   }
 }
