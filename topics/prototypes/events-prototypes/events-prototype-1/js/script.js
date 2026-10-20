@@ -2,17 +2,23 @@
  * Mixing Colours
  * Ilianna
  *
- * Mix colours to create new ones
+ * Mix colours to create new ones. Use keys or mouse to control the colours.
  */
 
 "use strict";
 
-// Create variable
+// Create variables
+
+// Colour variables
 let rC = 0;
 let gC = 0;
 let bC = 0;
+
+// Canvas dimensions
 let canvasW = 600;
 let canvasH = 600;
+
+// Circle characteristics
 let circleH = 520;
 let circleSize = 80;
 let rCx = 75;
@@ -26,7 +32,7 @@ function setup() {
   rectMode(CENTER);
 }
 
-// draw a square
+// draw a square to display colours, and circles to use as buttons
 function draw() {
   background(200);
   fill(rC, gC, bC);
@@ -47,9 +53,23 @@ function draw() {
   // Black circle
   fill(0);
   circle(blackCx, circleH, circleSize);
+
+  // Letters on the circles
+  textAlign(CENTER, CENTER);
+  textSize(24);
+  fill(255);
+  text("R", rCx, circleH);
+  text("G", gCx, circleH);
+  text("B", bCx, circleH);
+  text("T", blackCx, circleH);
+
+  // Instructions
+  fill(0);
+  text("Use keyboard or mouse to add and mix colours", canvasW / 2, canvasH * 0.06);
 }
 
 // use functions to add, change and mix colours
+// red
 function rAdd() {
   if (rC === 0) {
     rC = 255;
@@ -58,6 +78,7 @@ function rAdd() {
   }
 }
 
+// green
 function gAdd() {
   if (gC === 0) {
     gC = 255;
@@ -66,6 +87,7 @@ function gAdd() {
   }
 }
 
+// blue
 function bAdd() {
   if (bC === 0) {
     bC = 255;
@@ -74,12 +96,14 @@ function bAdd() {
   }
 }
 
+// black
 function bReset() {
   rC = 0;
   gC = 0;
   bC = 0;
 }
 
+// use keys to control which colours are added
 function keyPressed() {
   if (key === 'r') {
     rAdd();
@@ -98,6 +122,7 @@ function keyPressed() {
   }
 }
 
+// use mouse to click circles (buttons) to add colours
 function mousePressed() {
   // Red circle
   if (dist(mouseX, mouseY, rCx, circleH) < (circleSize / 2)) {
