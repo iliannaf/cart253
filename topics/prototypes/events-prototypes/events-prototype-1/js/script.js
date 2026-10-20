@@ -1,16 +1,16 @@
 /**
- * Title of Project
+ * Mixing Colours
  * Ilianna
  *
- * Description
+ * Mix colours to create new ones
  */
 
 "use strict";
 
 // Create variable
-let r = 0;
-let g = 0;
-let b = 0;
+let rC = 0;
+let gC = 0;
+let bC = 0;
 let canvasW = 600;
 let canvasH = 600;
 
@@ -23,31 +23,45 @@ function setup() {
 // draw a square
 function draw() {
   background(200);
-  fill(r, g, b);
+  fill(rC, gC, bC);
   square(canvasW / 2, canvasH / 2, 150);
 }
 
-// use different events to change and mix colours
-function mouseClicked() {
-  if (r === 0) {
-    r = 255;
+// use functions to add, change and mix colours
+function rAdd() {
+  if (rC === 0) {
+    rC = 255;
   } else {
-    r = 0;
+    rC = 0;
+  }
+}
+
+function gAdd() {
+  if (gC === 0) {
+    gC = 255;
+  } else {
+    gC = 0;
+  }
+}
+
+function bAdd() {
+  if (bC === 0) {
+    bC = 255;
+  } else {
+    bC = 0;
   }
 }
 
 function keyPressed() {
-  if (g === 0) {
-    g = 255;
-  } else {
-    g = 0;
+  if (key === 'r') {
+    rAdd();
   }
-}
 
-function mouseWheel() {
-  if (b === 0) {
-    b = 255;
-  } else {
-    b = 0;
+  if (key === 'g') {
+    gAdd();
+  }
+
+  if (key === 'b') {
+    bAdd();
   }
 }
