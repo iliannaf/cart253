@@ -36,7 +36,7 @@ function setup() {
 function draw() {
   background(200);
   fill(rC, gC, bC);
-  square(canvasW / 2, canvasH / 2.5, 300);
+  square(canvasW / 2, canvasH / 2.3, 300);
 
   // Red circle
   fill(255, 0, 0);
@@ -65,7 +65,7 @@ function draw() {
 
   // Instructions
   fill(0);
-  text("Use keyboard or mouse to add and mix colours", canvasW / 2, canvasH * 0.06);
+  text("Use keyboard or mouse to add and mix colours", canvasW / 2, canvasH * 0.08);
 }
 
 // use functions to add, change and mix colours
