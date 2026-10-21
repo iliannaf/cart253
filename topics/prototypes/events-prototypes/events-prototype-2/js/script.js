@@ -1,8 +1,8 @@
 /**
- * Title of Project
+ * Eat the Food
  * Ilianna
  *
- * Creating a movable character
+ * A moveable circle that needs to eat more circles. Get to 15 to win.
  */
 
 "use strict";
@@ -13,13 +13,15 @@ let canvasH = 500;
 let charX = canvasW / 2;
 let charY = canvasH / 2;
 let charS = 30;
+let score = 0;
+let targetScore = 15;
 let collectibles = [];
+let win = false;
 
-// Make a canvas to work on
+// Make a canvas to work on and food for the player
 function setup() {
   createCanvas(canvasW, canvasH);
 
-  // Spawn in food for the player
   for (let i = 0; i < 5; i++) {
     spawnFood();
   }
@@ -36,13 +38,27 @@ function spawnFood() {
   collectibles.push(food);
 }
 
-// Make a circle that moves
+// Make a circle that moves, check if the player eats or wins
 function draw() {
   background("lightgray");
 
-  stroke("black");
-  fill("blue");
-  ellipse(charX, charY, charS);
+  // Draw the score counter at the top
+  fill("white");
+  noStroke();
+  rect(0, 0, canvasW, 40);
+  fill("black");
+  textSize(18);
+  textAlign(LEFT, CENTER);
+  text("Score: " + score + " / " + targetScore, 10, 20);
+
+  // Stop the game when the player wins
+  if (win) {
+    fill("green");
+    textAlign(CENTER, CENTER);
+    textSize(32);
+    text("YOU WIN!", canvasW / 2, canvasH / 2);
+    return;
+  }
 
   // Use arrow keys to move
   if (keyIsDown(LEFT_ARROW)) charX -= 3;
@@ -61,5 +77,32 @@ function draw() {
     fill("green");
     stroke("black");
     ellipse(c.x, c.y, c.size);
+
+    // Check if the player eats food
+    let d = dist(charX, charY, c.x, c.y);
+
+    if (d < charS / 2 + c.size / 2) {
+      score++;
+
+      // Make the player grow
+      charS += 2;
+
+      // Remove the collected food
+      collectibles.splice(i, 1);
+
+      // Spawn new food
+      if (score < targetScore) {
+        spawnFood();
+      }
+
+      // Check if the player wins
+      if (score >= targetScore) {
+        win = true;
+      }
+    }
   }
+
+  stroke("black");
+  fill("blue");
+  ellipse(charX, charY, charS);
 }
