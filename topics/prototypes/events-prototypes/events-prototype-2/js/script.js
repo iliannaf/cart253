@@ -17,9 +17,16 @@ let charY = canvasH / 2;
 function setup() {
   createCanvas(canvasW, canvasH);
 }
-//
+// Make a circle that moves
 function draw() {
   background("lightgray");
+
   stroke("black");
   ellipse(charX, charY, 30);
+
+  // Use arrow keys to move
+  if (keyIsDown(LEFT_ARROW)) charX -= 3;
+  if (keyIsDown(RIGHT_ARROW)) charX += 3;
+  if (keyIsDown(UP_ARROW)) charY -= 3;
+  if (keyIsDown(DOWN_ARROW)) charY += 3;
 }
