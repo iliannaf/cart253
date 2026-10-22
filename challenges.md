@@ -8,6 +8,8 @@
 
 ### - [Challenge 5](#challenge-5)
 
+### - [Challenge 6](#challenge-6)
+
 ---
 
 ### [Challenge 2: Landscape](topics/weekly-challenges/instructions-challenge/index.html) {#challenge-2}
@@ -31,6 +33,12 @@
 ### [Challenge 5: You Lose!](topics/weekly-challenges/events-challenge/index.html) {#challenge-5}
 
 <img src="topics/version-control/version-control-workflow/images/You Lose!.png" alt="You Lose!" width="400">
+
+---
+
+### [Challenge 6: Bouncy Ball Ball Bonanza](topics/weekly-challenges/functions-challenge/index.html) {#challenge-5}
+
+<img src="topics/version-control/version-control-workflow/images/Bouncy Ball Bonanza.png" alt="Bouncy Ball Ball Bonanza" width="400">
 
 ---
 
