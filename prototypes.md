@@ -76,4 +76,26 @@
 
 ---
 
+## Events - Week 5 {#week-5}
+
+### [Prototype 1 - Mixing Colours](topics\prototypes\events-prototypes\events-prototype-1\index.html)
+
+<img src="topics\version-control\version-control-workflow\images\Mixing Colours.png" alt="Mixing Colours" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-1/js/script.js)
+
+### [Prototype 2 - Eat the Food](topics\prototypes\events-prototypes\events-prototype-2\index.html)
+
+<img src="topics\version-control\version-control-workflow\images\Eat the Food.png" alt="Eat the Food" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-2/js/script.js)
+
+### [Prototype 3 - Colourful Canvas](topics\prototypes\events-prototypes\events-prototype-3\index.html)
+
+<img src="topics\version-control\version-control-workflow\images\Colourful canvas.png" alt="Colourful Canvas" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-3/js/script.js)
+
+---
+
 ### [Back to Top](#prototypes-top)
