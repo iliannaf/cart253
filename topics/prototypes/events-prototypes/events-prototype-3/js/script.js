@@ -29,6 +29,14 @@ background(canvasColour);
     noStroke();
     circle(c.x, c.y, c.size);
   }
+
+  fill("white");
+  noStroke();
+  rect(0, 0, canvasW, 40);
+  fill("black");
+  textSize(18);
+  textAlign(LEFT, CENTER);
+  text("Click Mouse to Draw Circles. Press Space to Clear the Board.", 90, 20);
 }
 
 // Change canvas colour when the mouse moves
