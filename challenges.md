@@ -36,7 +36,7 @@
 
 ---
 
-### [Challenge 6: Bouncy Ball Ball Bonanza](topics/weekly-challenges/functions-challenge/index.html) {#challenge-5}
+### [Challenge 6: Bouncy Ball Ball Bonanza](topics/weekly-challenges/functions-challenge/index.html) {#challenge-6}
 
 <img src="topics/version-control/version-control-workflow/images/Bouncy Ball Bonanza.png" alt="Bouncy Ball Ball Bonanza" width="400">
 
