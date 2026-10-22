@@ -8,6 +8,8 @@
 
 ### - [Journal 4](#journal-4)
 
+### - [Journal 5](#journal-5)
+
 ---
 
 ## Journal Entry 1 - September 17, 2026 {#journal-1}
@@ -39,6 +41,14 @@ While making these prototypes, I learned more about using variables in P5.js. Va
 While creating this week's prototypes, I learned more about using conditionals in P5.js. I learned that they are very useful because they allow you to change things while the code is already running. Similar to variables, conditionals create new opportunities to make more complex projects. They also make it possible to make projects that are more interactive and game-like, which I think is very cool. I like that they can be used to create animations and different sequences of events. For example, when one clip or action ends, you can use an if statement to start another one. This makes it possible to have different things happen depending on what is happening in the program. As usual, it was difficult at first, but eventually I got better at not only finding ways to use conditionals, but also figuring out how to actually implement them in my code. I used conditionals to continue my Diglet sketch by using them to change Diglet's direction of motion once it gets fully out of the ground, allowing me to make a loop of it going in and out of the ground. This helped me understand how conditionals can respond to a specific situation and then cause something else to happen. Overall, I think conditionals will be a very useful tool for my future projects. I hope that in the future, I can use them to create more games, animations, and interactive projects. I am excited to experiment with them more and see what other possibilities they can create.
 
 <img src="topics\version-control\version-control-workflow\images\Day and Night.png" alt="Screenshot 4" width="400">
+
+---
+
+## Journal Entry 5 - October 22, 2026 {#journal-5}
+
+This week, we learned how to use events in P5.js. In my three prototypes, I experimented with different mouse and keyboard events to create sketches that focused on interactivity. Throughout my work, I was surprised by how many different event options were available and how they could be used in different ways. I really enjoyed working with events in P5.js because I found that they provide many opportunities to create interactive pieces, such as games. I hope that people who interact with my sketches have fun and feel encouraged to be creative. I tried to make my sketches very interactive, allowing users to explore different possibilities and express their artistic ideas through their interactions. Compared to the concepts we learned in previous lessons, I found events much simpler to understand and implement in my code. I was also able to combine the new events we learned with concepts from previous lessons. For example, I used events and variables together to make my sketches more interactive. When a user presses the mouse, the value of a specific variable changes, which allows the colours of certain elements in the P5.js sketch to change as well. This helped me understand how different coding concepts can work together to create more engaging experiences. In the future, I would like to continue developing my prototypes, specifically “Eat the Food”. I think there are many more features I could add to make the game more complex, challenging, and interesting. Overall, making these three prototypes helped me better understand how events can improve interactivity in P5.js.
+
+<img src="topics\version-control\version-control-workflow\images\Colourful canvas.png" alt="Screenshot 5" width="400">
 
 ---
 
