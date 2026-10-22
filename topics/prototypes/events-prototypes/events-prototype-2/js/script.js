@@ -50,6 +50,7 @@ function draw() {
   textSize(18);
   textAlign(LEFT, CENTER);
   text("Score: " + score + " / " + targetScore, 10, 20);
+  text("Use Arrow Keys to Move and Eat Food", 175, 20);
 
   // Stop the game when the player wins
   if (win) {
@@ -85,7 +86,7 @@ function draw() {
       score++;
 
       // Make the player grow
-      charS += 2;
+      charS += 5;
 
       // Remove the collected food
       collectibles.splice(i, 1);
