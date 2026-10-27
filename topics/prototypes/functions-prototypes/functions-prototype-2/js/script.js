@@ -14,6 +14,7 @@ let canvasH = 600;
 let balloonX = 200;
 let balloonY = 50;
 let balloonSpeed = 2;
+let basketW = 120;
 let score = 0;
 
 // Create a canvas to work on
@@ -26,7 +27,7 @@ function draw() {
   background("lightblue");
 
   drawBalloon(balloonX, balloonY);
-  drawBasket(mouseX, canvasH * 0.8, 80, 25);
+  drawBasket(mouseX, canvasH * 0.8, basketW, 25);
   drawScore();
   moveBalloon();
 }
@@ -45,7 +46,7 @@ function drawBalloon(x, y) {
 // How is the basket drawn
 function drawBasket(x, y, w, h) {
   x = constrain(x, w / 2, canvasW - w / 2);
-
+  basketW = constrain(basketW, 40, 120);
   fill(150, 90, 40);
   rect(x - w / 2, y, w, h);
 }
@@ -58,6 +59,7 @@ function moveBalloon() {
   if (balloonY > canvasH) {
     score = score - 1;
     balloonSpeed = balloonSpeed - 0.5;
+    basketW = basketW * 1.05;
     balloonY = 0;
     balloonX = random(20, canvasW - 20);
   }
@@ -71,6 +73,7 @@ function moveBalloon() {
   ) {
     score = score + 1;
     balloonSpeed = balloonSpeed + 0.5;
+    basketW = basketW * 0.95;
     balloonY = 0;
     balloonX = random(20, canvasW - 20);
   }
