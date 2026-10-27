@@ -20,19 +20,21 @@ function setup() {
 function draw() {
   background("lightblue");
 
-  // Grass
+  // Draw grass
   drawGrass(0, canvasH * 0.7, canvasW, canvasH * 0.3);
 
-  // Sun
+  // Draw sun
   drawSun(canvasW * 0.85, canvasH * 0.15, 30);
 }
 
+// How is the grass drawn
 function drawGrass(x, y, w, h) {
   noStroke();
   fill(47, 158, 57);
   rect(x, y, w, h);
 }
 
+// How is the sun drawn
 function drawSun(x, y, radius) {
   fill("yellow");
   noStroke();
