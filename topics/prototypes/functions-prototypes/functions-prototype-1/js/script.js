@@ -20,11 +20,22 @@ function setup() {
   createCanvas(canvasW, canvasH);
   background("lightblue");
 
+  instructions();
+
   // Draw grass
   drawGrass(0, canvasH * 0.7, canvasW, canvasH * 0.3);
 
   // Draw sun
-  drawSun(canvasW * 0.85, canvasH * 0.15, 30);
+  drawSun(canvasW * 0.85, canvasH * 0.2, 30);
+}
+
+function instructions() {
+  noStroke();
+  fill("white");
+  rect(0, 0, canvasW, canvasH * 0.06);
+  fill("black");
+  textSize(16);
+  text("Click on the Grass to Plant Flowers!", canvasW * 0.01, canvasH * 0.04)
 }
 
 // How is the grass drawn
