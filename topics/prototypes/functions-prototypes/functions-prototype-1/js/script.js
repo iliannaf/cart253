@@ -14,10 +14,6 @@ let canvasH = 600;
 // create a canvas to work on
 function setup() {
   createCanvas(canvasW, canvasH);
-}
-
-//
-function draw() {
   background("lightblue");
 
   // Draw grass
