@@ -15,11 +15,12 @@ let flowerY;
 let flowerSize;
 let flowerColour;
 
-// create a canvas to work on
+// create a canvas to work on and call functions
 function setup() {
   createCanvas(canvasW, canvasH);
   background("lightblue");
 
+  // Add Instructions at the Top
   instructions();
 
   // Draw grass
