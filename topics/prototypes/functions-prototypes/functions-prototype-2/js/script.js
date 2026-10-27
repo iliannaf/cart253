@@ -1,37 +1,84 @@
 /**
- * Title of Project
+ * Balloon Catcher
  * Ilianna
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Catch balloons using a basket connected to the user's mouse
  */
 
 "use strict";
+
 
 // variables
 let canvasW = 800;
 let canvasH = 600;
 let balloonX = 200;
 let balloonY = 50;
+let balloonSpeed = 2;
+let score = 0;
 
 // Create a canvas to work on
 function setup() {
-createCanvas(canvasW, canvasH);
+  createCanvas(canvasW, canvasH);
 }
 
-//
+// Call the functions
 function draw() {
-background("lightblue");
+  background("lightblue");
 
-drawBalloon();
+  drawBalloon(balloonX, balloonY);
+  drawBasket(mouseX, canvasH * 0.8, 80, 25);
+  drawScore();
+  moveBalloon();
 }
 
-function drawBalloon() {
-  fill(255, 80, 100);
+// How is the balloon drawn
+function drawBalloon(x, y) {
+  fill(212, 75, 66);
   noStroke();
-  ellipse(balloonX, balloonY, 35, 45);
+  ellipse(x, y, 35, 45);
 
   stroke(0);
-  line(balloonX, balloonY + 22, balloonX, balloonY + 40);
+  line(x, y + 22, x, y + 40);
   noStroke();
+}
+
+// How is the basket drawn
+function drawBasket(x, y, w, h) {
+  x = constrain(x, w / 2, canvasW - w / 2);
+
+  fill(150, 90, 40);
+  rect(x - w / 2, y, w, h);
+}
+
+// How does the balloon move
+function moveBalloon() {
+  balloonY = balloonY + balloonSpeed;
+
+  // Reset balloon if it reaches the bottom
+  if (balloonY > canvasH) {
+    score = score - 1;
+    balloonSpeed = balloonSpeed - 0.5;
+    balloonY = 0;
+    balloonX = random(20, canvasW - 20);
+  }
+
+  // Check if the balloon touches the basket
+  if (
+    balloonY + 22.5 >= canvasH * 0.8 &&
+    balloonY - 22.5 <= canvasH * 0.8 + 25 &&
+    balloonX > mouseX - 40 &&
+    balloonX < mouseX + 40
+  ) {
+    score = score + 1;
+    balloonSpeed = balloonSpeed + 0.5;
+    balloonY = 0;
+    balloonX = random(20, canvasW - 20);
+  }
+}
+
+// Track the score on top
+function drawScore() {
+  fill(0);
+  textSize(20);
+  text("Score: " + score, 10, 25);
 }
