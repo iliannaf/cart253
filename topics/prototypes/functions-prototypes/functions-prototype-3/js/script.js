@@ -1,24 +1,19 @@
 /**
- * Title of Project
- * Author Name
+ * Construction
+ * Ilianna
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Let's build a house step by step
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
+// Create a canvas to work on
 function setup() {
-
+  createCanvas(800, 600);
 }
 
 
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+//
 function draw() {
-
+background("lightblue");
 }
