@@ -1,8 +1,8 @@
 /**
- * Construction
+ * Let's Build a House!
  * Ilianna
  * 
- * Let's build a house step by step
+ * Let's build a house step by step using mouse clicks
  */
 
 "use strict";
