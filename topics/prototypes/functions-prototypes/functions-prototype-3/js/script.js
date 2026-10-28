@@ -18,7 +18,7 @@ function setup() {
   createCanvas(canvasW, canvasH);
 }
 
-//
+// Call all the functions
 function draw() {
   background("lightblue");
   drawGrass(0, 520, canvasW, grassH);
@@ -29,20 +29,24 @@ function draw() {
   drawLwindow();
   drawRwindow();
   drawChimney(470, 240, 30, 80);
+  instructions();
 }
 
+// Draw the grass
 function drawGrass(x, y, w, h) {
   noStroke();
   fill("forestgreen");
   rect(x, y, w, h);
 }
 
+// Draw the sun
 function drawSun(x, y, size) {
   fill("gold");
   noStroke();
   circle(x, y, size);
 }
 
+// Draw the base of the house
 function drawWalls(x, y, w, h) {
     if (progress >= 1) {
     fill("khaki");
@@ -51,6 +55,7 @@ function drawWalls(x, y, w, h) {
     }
 }
 
+// Draw the roof
 function drawRoof(x1, y1, x2, y2, x3, y3) {
     if (progress >= 2) {
     fill("sienna");
@@ -59,6 +64,7 @@ function drawRoof(x1, y1, x2, y2, x3, y3) {
     }
 }
 
+// Draw the door
 function drawDoor(x, y, w, h, x2, y2, s) {
     if (progress >= 3) {
     fill("saddlebrown");
@@ -68,6 +74,7 @@ function drawDoor(x, y, w, h, x2, y2, s) {
     }
 }
 
+// Draw the windows
 function drawLwindow() {
     if (progress >= 4) {
     fill("paleturquoise");
@@ -88,6 +95,7 @@ function drawRwindow() {
     }
 }
 
+// Draw the chimney
 function drawChimney(x, y, w, h) {
     if (progress >= 6) {
     fill("saddlebrown");
@@ -96,6 +104,20 @@ function drawChimney(x, y, w, h) {
     }
 }
 
+// Add instructions on top
+function instructions() {
+  noStroke();
+  fill(30);
+  textSize(18);
+  textAlign(CENTER);
+  text("Click the Screen to Build your House! (" +
+       min(progress, 6) + "/6)", canvasW / 2, 30);
+  if (progress >= 6) {
+    text("Your House is Complete!", canvasW / 2, 60);
+  }
+}
+
+// Add a new piece each time the mouse is pressed
 function mousePressed() {
   if (progress < 6) {
     progress++;
