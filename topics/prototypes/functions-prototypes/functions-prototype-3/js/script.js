@@ -7,26 +7,38 @@
 
 "use strict";
 
+// Variables
+let canvasW = 800;
+let canvasH = 600;
+let grassH = canvasH * 0.8;
+
 // Create a canvas to work on
 function setup() {
-  createCanvas(800, 600);
+  createCanvas(canvasW, canvasH);
 }
-
 
 //
 function draw() {
   background("lightblue");
-  drawGrass(0, 520, 800, 80);
-  drawSun(700, 60, 60);
+  drawGrass(0, 520, canvasW, grassH);
+  drawSun(canvasW * 0.9, canvasH * 0.1, 60);
+  drawWalls(canvasW * 0.32, canvasH * 0.58, canvasW * 0.35, canvasH * 0.35);
 }
 
 function drawGrass(x, y, w, h) {
-  fill(100, 180, 100);
+  noStroke();
+  fill("forestgreen");
   rect(x, y, w, h);
 }
 
 function drawSun(x, y, size) {
-  fill(255, 220, 80);
+  fill("gold");
   noStroke();
   circle(x, y, size);
+}
+
+function drawWalls(x, y, w, h) {
+    fill("khaki");
+    stroke(80);
+    rect(x, y, w, h);
 }
