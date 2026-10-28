@@ -23,6 +23,7 @@ function draw() {
   drawGrass(0, 520, canvasW, grassH);
   drawSun(canvasW * 0.9, canvasH * 0.1, 60);
   drawWalls(canvasW * 0.32, canvasH * 0.58, canvasW * 0.35, canvasH * 0.35);
+  drawRoof(canvasW * 0.29, canvasH * 0.58, canvasW * 0.495, canvasH * 0.35, canvasW * 0.70, canvasH * 0.58);
 }
 
 function drawGrass(x, y, w, h) {
@@ -41,4 +42,10 @@ function drawWalls(x, y, w, h) {
     fill("khaki");
     stroke(80);
     rect(x, y, w, h);
+}
+
+function drawRoof(x1, y1, x2, y2, x3, y3) {
+    fill("brown");
+    stroke(80);
+    triangle(x1, y1, x2, y2, x3, y3);
 }
