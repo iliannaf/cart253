@@ -11,6 +11,7 @@
 let canvasW = 800;
 let canvasH = 600;
 let grassH = canvasH * 0.8;
+let progress = 0;
 
 // Create a canvas to work on
 function setup() {
@@ -43,42 +44,62 @@ function drawSun(x, y, size) {
 }
 
 function drawWalls(x, y, w, h) {
+    if (progress >= 1) {
     fill("khaki");
     stroke(80);
     rect(x, y, w, h);
+    }
 }
 
 function drawRoof(x1, y1, x2, y2, x3, y3) {
+    if (progress >= 2) {
     fill("sienna");
     stroke(80);
     triangle(x1, y1, x2, y2, x3, y3);
+    }
 }
 
 function drawDoor(x, y, w, h, x2, y2, s) {
+    if (progress >= 3) {
     fill("saddlebrown");
     rect(x, y, w, h);
     fill("gold");
     circle(x2, y2, s);
+    }
 }
 
 function drawLwindow() {
+    if (progress >= 4) {
     fill("paleturquoise");
     stroke(80);
     rect(290, 390, 55, 55);
     line(317.5, 390, 317.5, 445);
     line(290, 417.5, 345, 417.5);
+    }
 }
 
 function drawRwindow() {
+    if (progress >= 5) {
     fill("paleturquoise");
     stroke(80);
     rect(445, 390, 55, 55);
     line(472.5, 390, 472.5, 445);
     line(445, 417.5, 500, 417.5);
+    }
 }
 
 function drawChimney(x, y, w, h) {
+    if (progress >= 6) {
     fill("saddlebrown");
     stroke(80);
     rect(x, y, w, h);
+    }
+}
+
+function mousePressed() {
+  if (progress < 6) {
+    progress++;
+  } else {
+    progress = 0;
+  }
 }
