@@ -27,6 +27,7 @@ function draw() {
   drawDoor(canvasW * 0.464, canvasH * 0.814, 50, 70, canvasW * 0.515, canvasH * 0.88, 6);
   drawLwindow();
   drawRwindow();
+  drawChimney(470, 240, 30, 80);
 }
 
 function drawGrass(x, y, w, h) {
@@ -74,4 +75,10 @@ function drawRwindow() {
     rect(445, 390, 55, 55);
     line(472.5, 390, 472.5, 445);
     line(445, 417.5, 500, 417.5);
+}
+
+function drawChimney(x, y, w, h) {
+    fill("saddlebrown");
+    stroke(80);
+    rect(x, y, w, h);
 }
