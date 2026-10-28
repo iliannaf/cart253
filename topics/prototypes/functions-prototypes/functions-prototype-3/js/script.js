@@ -25,6 +25,8 @@ function draw() {
   drawWalls(canvasW * 0.32, canvasH * 0.58, canvasW * 0.35, canvasH * 0.35);
   drawRoof(canvasW * 0.29, canvasH * 0.58, canvasW * 0.495, canvasH * 0.35, canvasW * 0.70, canvasH * 0.58);
   drawDoor(canvasW * 0.464, canvasH * 0.814, 50, 70, canvasW * 0.515, canvasH * 0.88, 6);
+  drawLwindow();
+  drawRwindow();
 }
 
 function drawGrass(x, y, w, h) {
@@ -56,4 +58,20 @@ function drawDoor(x, y, w, h, x2, y2, s) {
     rect(x, y, w, h);
     fill("gold");
     circle(x2, y2, s);
+}
+
+function drawLwindow() {
+    fill("paleturquoise");
+    stroke(80);
+    rect(290, 390, 55, 55);
+    line(317.5, 390, 317.5, 445);
+    line(290, 417.5, 345, 417.5);
+}
+
+function drawRwindow() {
+    fill("paleturquoise");
+    stroke(80);
+    rect(445, 390, 55, 55);
+    line(472.5, 390, 472.5, 445);
+    line(445, 417.5, 500, 417.5);
 }
