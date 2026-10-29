@@ -8,6 +8,8 @@
 
 ### - [Week 5](#week-5)
 
+### - [Week 6](#week-6)
+
 ---
 
 ## Drawings - Week 2 {#week-2}
@@ -93,6 +95,28 @@
 ### [Prototype 3 - Colourful Canvas](topics\prototypes\events-prototypes\events-prototype-3\index.html)
 
 <img src="topics\version-control\version-control-workflow\images\Colourful canvas.png" alt="Colourful Canvas" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-3/js/script.js)
+
+---
+
+## Functions - Week 6 {#week-6}
+
+### [Prototype 1 - Planting Flowers](topics\prototypes\functions-prototypes\functions-prototype-1\index.html)
+
+<img src="topics\version-control\version-control-workflow\images\PlantingFlowers.png" alt="Planting Flowers" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-1/js/script.js)
+
+### [Prototype 2 - Balloon Catcher](topics\prototypes\functions-prototypes\functions-prototype-2\index.html)
+
+<img src="topics\version-control\version-control-workflow\images\BalloonCatcher.png" alt="Balloon Catcher" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-2/js/script.js)
+
+### [Prototype 3 - Let's Build a House!](topics\prototypes\functions-prototypes\functions-prototype-3\index.html)
+
+<img src="topics\version-control\version-control-workflow\images\LetsBuildAHouseS.png" alt="Let's Build a House!" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/events-prototypes/events-prototype-3/js/script.js)
 
