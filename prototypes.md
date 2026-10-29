@@ -116,7 +116,7 @@
 
 ### [Prototype 3 - Let's Build a House!](topics\prototypes\functions-prototypes\functions-prototype-3\index.html)
 
-<img src="topics\version-control\version-control-workflow\images\LetsBuildAHouseS.png" alt="Let's Build a House!" width="400">
+<img src="topics\version-control\version-control-workflow\images\LetsBuildAHouse.png" alt="Let's Build a House!" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/functions-prototypes/functions-prototype-3/js/script.js)
 
