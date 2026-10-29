@@ -10,6 +10,8 @@
 
 ### - [Challenge 6](#challenge-6)
 
+### - [Challenge 7](#challenge-7)
+
 ---
 
 ### [Challenge 2: Landscape](topics/weekly-challenges/instructions-challenge/index.html) {#challenge-2}
@@ -39,6 +41,12 @@
 ### [Challenge 6: Bouncy Ball Ball Bonanza](topics/weekly-challenges/functions-challenge/index.html) {#challenge-6}
 
 <img src="topics/version-control/version-control-workflow/images/Bouncy Ball Bonanza.png" alt="Bouncy Ball Ball Bonanza" width="400">
+
+---
+
+### [Challenge 7: Boingo](topics/weekly-challenges/arrays-challenge/index.html) {#challenge-7}
+
+<img src="topics/version-control/version-control-workflow/images/Boingo.png" alt="Boingo" width="400">
 
 ---
 
