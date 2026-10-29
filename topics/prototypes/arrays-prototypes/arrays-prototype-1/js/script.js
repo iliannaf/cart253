@@ -13,8 +13,8 @@ let ballY = 400;
 let ballX = 300;
 let ballWy = 400;
 let ballWx = 300;
-let eightY = 410;
-let eightX = 292;
+let eightY = 400;
+let eightX = 300;
 
 let shake = 0;
 let decay = 0.9;
@@ -40,6 +40,11 @@ function setup() {
 
 function draw() {
   background("lightgray");
+  fill("black");
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text("Have a Question?", 300, 60);
+  text("Shake the Ball to Receive your Answer", 300, 100);
 
   // Random number to shake the ball and then make it stop
   let offsetX = random(-shake, shake);
@@ -59,7 +64,7 @@ function drawMagic8(offsetX, offsetY) {
   // Number '8'
   fill("black");
   textSize(30);
-  text(8, eightX + offsetX, eightY + offsetY);
+  text("8", eightX + offsetX, eightY + offsetY);
 }
 
 function shakeBall() {
