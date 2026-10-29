@@ -10,6 +10,8 @@
 
 ### - [Journal 5](#journal-5)
 
+### - [Journal 6](#journal-6)
+
 ---
 
 ## Journal Entry 1 - September 17, 2026 {#journal-1}
@@ -49,6 +51,14 @@ While creating this week's prototypes, I learned more about using conditionals i
 This week, we learned how to use events in P5.js. In my three prototypes, I experimented with different mouse and keyboard events to create sketches that focused on interactivity. Throughout my work, I was surprised by how many different event options were available and how they could be used in different ways. I really enjoyed working with events in P5.js because I found that they provide many opportunities to create interactive pieces, such as games. I hope that people who interact with my sketches have fun and feel encouraged to be creative. I tried to make my sketches very interactive, allowing users to explore different possibilities and express their artistic ideas through their interactions. Compared to the concepts we learned in previous lessons, I found events much simpler to understand and implement in my code. I was also able to combine the new events we learned with concepts from previous lessons. For example, I used events and variables together to make my sketches more interactive. When a user presses the mouse, the value of a specific variable changes, which allows the colours of certain elements in the P5.js sketch to change as well. This helped me understand how different coding concepts can work together to create more engaging experiences. In the future, I would like to continue developing my prototypes, specifically “Eat the Food”. I think there are many more features I could add to make the game more complex, challenging, and interesting. Overall, making these three prototypes helped me better understand how events can improve interactivity in P5.js.
 
 <img src="topics\version-control\version-control-workflow\images\Colourful canvas.png" alt="Screenshot 5" width="400">
+
+---
+
+## Journal Entry 6 - October 29, 2026 {#journal-6}
+
+This week, we learned more about functions in P5.js. One thing that surprised me was how useful functions can be to avoid repeating code, helping to make the js file more organized. Using a function means that I can write some code once and reuse it whenever I need it. It's also useful in the same way that variables are, because you can change a number once instead of having to change it multiple times. I thought using parameters was interesting because it allows you to use the same function to make the same things but a bit different. Something I found a bit challenging was understanding how to use functions beyond just making code more organized. Using functions to get return values didn't totally make sense to me, but I think I understand it a bit more after making my prototypes. What I find cool about functions is that they can make coding much easier. Instead of manually changing many things, I can adjust a parameter or modify one function and see how the whole sketch changes. I would like someone interacting with my work to have fun with the interactivity that functions create. In the future, I would like to continue to use functions to organize and simplify the code in my projects. Overall, making this week's prototypes helped me to understand how functions can make a project simpler and easier to develop, while also showing me how much more organized and concise my overall code can be.
+
+<img src="topics\version-control\version-control-workflow\images\PlantingFlowers.png" alt="Screenshot 6" width="400">
 
 ---
 
