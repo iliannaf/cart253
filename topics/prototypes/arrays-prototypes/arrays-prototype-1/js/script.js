@@ -7,6 +7,20 @@
 
 "use strict";
 
+// Variables
+let ballSize = 200;
+let ballY = 400;
+let ballX = 300;
+let ballWy = 400;
+let ballWx = 300;
+let eightY = 410;
+let eightX = 292;
+
+let shake = 0;
+let decay = 0.9;
+
+let randomAnswers;
+
 // Make an array to keep our answers in
 const answers = [
   "YES",
@@ -19,27 +33,41 @@ const answers = [
   "My sources say no",
 ];
 
-// Pick an answer at random (or with magic?)
-let randomAnswers = random(answers);
-
-//
 function setup() {
   createCanvas(600, 600);
+  randomAnswers = random(answers);
 }
 
-//
 function draw() {
   background("lightgray");
-  drawMagic8();
+
+  // Random number to shake the ball and then make it stop
+  let offsetX = random(-shake, shake);
+  let offsetY = random(-shake, shake);
+  drawMagic8(offsetX, offsetY);
+  shake = shake * decay;
 }
 
-function drawMagic8() {
+function drawMagic8(offsetX, offsetY) {
   noStroke();
+  // Ball
   fill("black");
-  ellipse(300, 400, 200);
+  ellipse(ballX + offsetX, ballY + offsetY, ballSize);
+  // White part
   fill("white");
-  ellipse(300, 400, 75);
+  ellipse(ballWx + offsetX, ballWy + offsetY, 75);
+  // Number '8'
   fill("black");
   textSize(30);
-  text(8, 292, 410);
+  text(8, eightX + offsetX, eightY + offsetY);
+}
+
+function shakeBall() {
+  shake = 15;
+}
+
+function mousePressed() {
+  if (dist(mouseX, mouseY, ballX, ballY) < ballSize / 2) {
+    shakeBall();
+  }
 }
