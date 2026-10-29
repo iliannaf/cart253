@@ -25,7 +25,7 @@ const answers = [
   "NO",
   "It is certain",
   "Ask again later",
-  "Reply hazy, try again",
+  "Maybe",
   "Most likely",
   "Very doubtful",
   "My sources say no",
