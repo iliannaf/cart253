@@ -7,6 +7,21 @@
 
 "use strict";
 
+// Make an array to keep our answers in
+const answers = [
+  "YES",
+  "NO",
+  "It is certain",
+  "Ask again later",
+  "Reply hazy, try again",
+  "Most likely",
+  "Very doubtful",
+  "My sources say no",
+];
+
+// Pick an answer at random (or with magic?)
+let randomAnswers = random(answers);
+
 //
 function setup() {}
 
