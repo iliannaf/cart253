@@ -23,7 +23,23 @@ const answers = [
 let randomAnswers = random(answers);
 
 //
-function setup() {}
+function setup() {
+  createCanvas(600, 600);
+}
 
 //
-function draw() {}
+function draw() {
+  background("lightgray");
+  drawMagic8();
+}
+
+function drawMagic8() {
+  noStroke();
+  fill("black");
+  ellipse(300, 400, 200);
+  fill("white");
+  ellipse(300, 400, 75);
+  fill("black");
+  textSize(30);
+  text(8, 292, 410);
+}
