@@ -1,24 +1,14 @@
 /**
- * Title of Project
- * Author Name
- * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Magic 8 Ball
+ * Ilianna
+ *
+ * A magic 8 ball that gives you advice. Made using code from the arrays learning materials by Pippin Barr.
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+//
+function setup() {}
 
-}
-
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
-function draw() {
-
-}
+//
+function draw() {}
