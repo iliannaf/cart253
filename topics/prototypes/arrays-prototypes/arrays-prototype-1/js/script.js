@@ -15,11 +15,9 @@ let ballWy = 400;
 let ballWx = 300;
 let eightY = 400;
 let eightX = 300;
-
 let shake = 0;
 let decay = 0.9;
-
-let randomAnswers;
+let randomAnswers = "";
 
 // Make an array to keep our answers in
 const answers = [
@@ -35,16 +33,22 @@ const answers = [
 
 function setup() {
   createCanvas(600, 600);
-  randomAnswers = random(answers);
 }
 
 function draw() {
   background("lightgray");
+
+  // Instructions
   fill("black");
   textSize(20);
   textAlign(CENTER, CENTER);
   text("Have a Question?", 300, 60);
   text("Shake the Ball to Receive your Answer", 300, 100);
+
+  // Answer text
+  fill("blueviolet");
+  textSize(24);
+  text(randomAnswers, 300, 210);
 
   // Random number to shake the ball and then make it stop
   let offsetX = random(-shake, shake);
@@ -53,26 +57,40 @@ function draw() {
   shake = shake * decay;
 }
 
+// how to draw the magic 8 ball
 function drawMagic8(offsetX, offsetY) {
   noStroke();
+
   // Ball
   fill("black");
   ellipse(ballX + offsetX, ballY + offsetY, ballSize);
+
   // White part
   fill("white");
   ellipse(ballWx + offsetX, ballWy + offsetY, 75);
-  // Number '8'
+
+  // Number 8
   fill("black");
   textSize(30);
   text("8", eightX + offsetX, eightY + offsetY);
 }
 
+// to shake the ball
 function shakeBall() {
   shake = 15;
 }
 
+// Shake the ball and receive an answer when mouse or any key is clicked
 function mousePressed() {
   if (dist(mouseX, mouseY, ballX, ballY) < ballSize / 2) {
     shakeBall();
+    randomAnswers = random(answers);
+  }
+}
+
+function keyPressed() {
+  if (dist(mouseX, mouseY, ballX, ballY) < ballSize / 2) {
+    shakeBall();
+    randomAnswers = random(answers);
   }
 }
