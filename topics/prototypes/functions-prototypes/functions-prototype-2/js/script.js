@@ -1,12 +1,11 @@
 /**
  * Balloon Catcher
  * Ilianna
- * 
+ *
  * Catch balloons using a basket connected to the user's mouse
  */
 
 "use strict";
-
 
 // variables
 let canvasW = 800;
@@ -41,6 +40,7 @@ function drawBalloon(x, y) {
   stroke(0);
   line(x, y + 22, x, y + 40);
   noStroke();
+  balloonSpeed = constrain(balloonSpeed, 0.5, 30);
 }
 
 // How is the basket drawn
