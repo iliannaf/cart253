@@ -14,7 +14,7 @@
 
 ---
 
-## Drawings - Week 2 {#week-2}
+## Week 2 - Drawings {#week-2}
 
 ### [Prototype 1 - Standard Building](topics/prototypes/instructions-prototypes/intructions-prototype1/index.html)
 
@@ -36,7 +36,7 @@
 
 ---
 
-## Variables - Week 3 {#week-3}
+## Week 3 - Variables {#week-3}
 
 ### [Prototype 1 - Diglet V2](topics/prototypes/variables-prototypes/variables-prototype-1/index.html)
 
@@ -58,7 +58,7 @@
 
 ---
 
-## Conditionals - Week 4 {#week-4}
+## Week 4 - Conditionals {#week-4}
 
 ### [Prototype 1 - Hockey Game](topics/prototypes/conditionals-prototypes/conditionals-prototype-1/index.html)
 
@@ -80,7 +80,7 @@
 
 ---
 
-## Events - Week 5 {#week-5}
+## Week 5 - Events {#week-5}
 
 ### [Prototype 1 - Mixing Colours](topics\prototypes\events-prototypes\events-prototype-1\index.html)
 
@@ -102,7 +102,7 @@
 
 ---
 
-## Functions - Week 6 {#week-6}
+## Week 6 - Functions {#week-6}
 
 ### [Prototype 1 - Planting Flowers](topics\prototypes\functions-prototypes\functions-prototype-1\index.html)
 
@@ -124,7 +124,7 @@
 
 ---
 
-## Arrays - Week 7 {#week-7}
+## Week 7 - Arrays {#week-7}
 
 ### [Prototype 1 - Magic 8 Ball](topics\prototypes\arrays-prototypes\arrays-prototype-1\index.html)
 
