@@ -1,18 +1,18 @@
 # Ilianna's Journal Entries {#journals-top}
 
-### - [Journal 1](#journal-1)
+### [Journal 1 - September 17, 2026](#journal-1)
 
-### - [Journal 2](#journal-2)
+### [Journal 2 - September 24, 2026](#journal-2)
 
-### - [Journal 3](#journal-3)
+### [Journal 3 - October 1, 2026](#journal-3)
 
-### - [Journal 4](#journal-4)
+### [Journal 4 - October 8, 2026](#journal-4)
 
-### - [Journal 5](#journal-5)
+### [Journal 5 - October 22, 2026](#journal-5)
 
-### - [Journal 6](#journal-6)
+### [Journal 6 - October 29, 2026](#journal-6)
 
-### - [Journal 7](#journal-7)
+### [Journal 7 - November 5, 2026](#journal-7)
 
 ---
 
