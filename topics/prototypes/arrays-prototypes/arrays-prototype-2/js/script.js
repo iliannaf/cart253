@@ -22,7 +22,7 @@ createCanvas(canvasW, canvasH);
 
   // create stars
   for (let i = 0; i < numStars; i++) {
-    stars[i] = [random(width), random(height)];
+    stars[i] = [random(canvasW), random(30, canvasH)];
   }
 }
 
@@ -30,9 +30,17 @@ createCanvas(canvasW, canvasH);
 function draw() {
 background(34, 39, 92);
 
-  // draw lines for star connections
-  stroke(150, 180, 255);
-  strokeWeight(1);
+// instructions
+fill("white");
+rect(0, 0, canvasW, 30,);
+fill("black");
+textSize(15);
+textAlign(CENTER);
+text("Click on Stars to Create Constellations. Refresh the Page to Reset.", canvasW / 2, 20);
+
+// draw lines for star connections
+stroke(150, 180, 255);
+strokeWeight(1);
 
   for (let i = 0; i < connections.length; i++) {
     let a = connections[i][0];
@@ -44,9 +52,10 @@ background(34, 39, 92);
     );
   }
 
-  // draw stars
-  noStroke();
-  fill(255);
+// draw stars
+noStroke();
+fill(255);
+
   for (let i = 0; i < stars.length; i++) {
     circle(stars[i][0], stars[i][1], 4);
   }
