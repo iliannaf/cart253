@@ -6,7 +6,7 @@ Ilianna
 
 ## Description
 
-Make a starry night sky that changes with every page refresh
+Make a starry night sky that changes with every page refresh. Use the mouse to create custom constellations.
 
 ## Attribution
 
