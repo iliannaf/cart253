@@ -10,6 +10,8 @@
 
 ### - [Week 6](#week-6)
 
+### - [Week 7](#week-7)
+
 ---
 
 ## Drawings - Week 2 {#week-2}
@@ -119,6 +121,28 @@
 <img src="topics\version-control\version-control-workflow\images\LetsBuildAHouse.png" alt="Let's Build a House!" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/functions-prototypes/functions-prototype-3/js/script.js)
+
+---
+
+## Arrays - Week 7 {#week-7}
+
+### [Prototype 1 - Magic 8 Ball](topics\prototypes\functions-prototypes\arrays-prototype-1\index.html)
+
+<img src="" alt="Magic 8 Ball" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/functions-prototype-1/js/script.js)
+
+### [Prototype 2 - Starry Sky](topics\prototypes\functions-prototypes\arrays-prototype-2\index.html)
+
+<img src="" alt="Starry Sky" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/functions-prototype-2/js/script.js)
+
+### [Prototype 3 - Rain](topics\prototypes\functions-prototypes\arrays-prototype-3\index.html)
+
+<img src="" alt="Rain" width="400">
+
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/functions-prototype-3/js/script.js)
 
 ---
 
