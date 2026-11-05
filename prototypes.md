@@ -1,16 +1,16 @@
 # Ilianna's Prototypes {#prototypes-top}
 
-### - [Week 2](#week-2)
+### [Week 2] - Drawings(#week-2)
 
-### - [Week 3](#week-3)
+### [Week 3] - Variables(#week-3)
 
-### - [Week 4](#week-4)
+### [Week 4] - Conditionals(#week-4)
 
-### - [Week 5](#week-5)
+### [Week 5] - Events(#week-5)
 
-### - [Week 6](#week-6)
+### [Week 6] - Functions(#week-6)
 
-### - [Week 7](#week-7)
+### [Week 7] - Arrays(#week-7)
 
 ---
 
