@@ -128,19 +128,19 @@
 
 ### [Prototype 1 - Magic 8 Ball](topics\prototypes\arrays-prototypes\arrays-prototype-1\index.html)
 
-<img src="" alt="Magic 8 Ball" width="400">
+<img src="topics\version-control\version-control-workflow\images\Magic8Ball.png" alt="Magic 8 Ball" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/arrays-prototype-1/js/script.js)
 
 ### [Prototype 2 - Starry Sky](topics\prototypes\arrays-prototypes\arrays-prototype-2\index.html)
 
-<img src="" alt="Starry Sky" width="400">
+<img src="topics\version-control\version-control-workflow\images\StarrySky.png" alt="Starry Sky" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/arrays-prototype-2/js/script.js)
 
 ### [Prototype 3 - Rain](topics\prototypes\arrays-prototypes\arrays-prototype-3\index.html)
 
-<img src="" alt="Rain" width="400">
+<img src="topics\version-control\version-control-workflow\images\Rain.png" alt="Rain" width="400">
 
 [Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/arrays-prototype-3/js/script.js)
 

@@ -68,7 +68,7 @@ This week, we learned more about functions in P5.js. One thing that surprised me
 
 (journal entry)
 
-<img src="" alt="Screenshot 7" width="400">
+<img src="topics\version-control\version-control-workflow\images\StarrySky.png" alt="Screenshot 7" width="400">
 
 ---
 
