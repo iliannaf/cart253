@@ -66,7 +66,7 @@ This week, we learned more about functions in P5.js. One thing that surprised me
 
 ## Journal Entry 7 - November 5, 2026 {#journal-7}
 
-(journal entry)
+This week, we learned about arrays in P5.js. One thing that surprised me about arrays, is that they can be used in different ways. You can make an array with manually written information inside of it, for example my Magic 8 Ball sketch, or you can make an array combined with a loop to create an array with information that the loop makes for you, for example my Starry Sky sketch. Arrays are useful because they can hold information and make it easier to organize and access that information throughout the rest of your code. As usual, at first I found this new concept challenging to implement into my code, but after research and trial and error, arrays became easier to understand. Something I found cool about arrays, is how they allow you to shorten and better organize your code. I find that arrays act like variables, in the way that you can give a certain value a name. However, instead of needing to have a bunch of individual variables that are all very similar, you can just put them all into one array. This reduces the amount of code in your project, and makes it easier to organize things. I would like someone interacting with my work to be fascinated by all the different things happening on the screen. I think people who don't code or don't understand arrays, would imagine that all the things on the screen probably took a long time to add in, however, the arrays actually make it very simple. In the future, I would like to continue to use arrays to make projects with many elements.
 
 <img src="topics\version-control\version-control-workflow\images\StarrySky.png" alt="Screenshot 7" width="400">
 
