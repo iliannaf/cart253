@@ -1,24 +1,22 @@
 /**
- * Title of Project
- * Author Name
+ * Starry Sky
+ * Ilianna
  * 
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ * Make a starry night sky that changes with every page refresh
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
-*/
-function setup() {
+// variables
+let canvasW = 800;
+let canvasH = 600;
 
+// create a canvas to work on
+function setup() {
+createCanvas(canvasW, canvasH);
 }
 
-
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
-*/
+//
 function draw() {
-
+background(blue);
 }
