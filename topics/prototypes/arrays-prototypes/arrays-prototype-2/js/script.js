@@ -18,5 +18,5 @@ createCanvas(canvasW, canvasH);
 
 //
 function draw() {
-background(blue);
+background(34, 39, 92);
 }
