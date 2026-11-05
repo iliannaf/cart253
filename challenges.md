@@ -12,6 +12,8 @@
 
 ### - [Challenge 7](#challenge-7)
 
+### - [Challenge 8](#challenge-8)
+
 ---
 
 ### [Challenge 2: Landscape](topics/weekly-challenges/instructions-challenge/index.html) {#challenge-2}
@@ -47,6 +49,12 @@
 ### [Challenge 7: Boingo](topics/weekly-challenges/arrays-challenge/index.html) {#challenge-7}
 
 <img src="topics/version-control/version-control-workflow/images/Boingo.png" alt="Boingo" width="400">
+
+---
+
+### [Challenge 8: Lines](topics/weekly-challenges/loops-challenge/index.html) {#challenge-8}
+
+<img src="topics/version-control/version-control-workflow/images/Lines.png" alt="Lines" width="400">
 
 ---
 
