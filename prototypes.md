@@ -126,23 +126,23 @@
 
 ## Arrays - Week 7 {#week-7}
 
-### [Prototype 1 - Magic 8 Ball](topics\prototypes\functions-prototypes\arrays-prototype-1\index.html)
+### [Prototype 1 - Magic 8 Ball](topics\prototypes\arrays-prototypes\arrays-prototype-1\index.html)
 
 <img src="" alt="Magic 8 Ball" width="400">
 
-[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/functions-prototype-1/js/script.js)
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/arrays-prototype-1/js/script.js)
 
-### [Prototype 2 - Starry Sky](topics\prototypes\functions-prototypes\arrays-prototype-2\index.html)
+### [Prototype 2 - Starry Sky](topics\prototypes\arrays-prototypes\arrays-prototype-2\index.html)
 
 <img src="" alt="Starry Sky" width="400">
 
-[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/functions-prototype-2/js/script.js)
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/arrays-prototype-2/js/script.js)
 
-### [Prototype 3 - Rain](topics\prototypes\functions-prototypes\arrays-prototype-3\index.html)
+### [Prototype 3 - Rain](topics\prototypes\arrays-prototypes\arrays-prototype-3\index.html)
 
 <img src="" alt="Rain" width="400">
 
-[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/functions-prototype-3/js/script.js)
+[Code](https://github.com/iliannaf/cart253/blob/main/topics/prototypes/arrays-prototypes/arrays-prototype-3/js/script.js)
 
 ---
 
