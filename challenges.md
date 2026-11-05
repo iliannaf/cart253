@@ -1,18 +1,18 @@
 # Ilianna's Weekly Challenges {#challenges-top}
 
-### - [Challenge 2](#challenge-2)
+### [Challenge 2 - Landscape](#challenge-2)
 
-### - [Challenge 3](#challenge-3)
+### [Challenge 3 - Mr. Furious](#challenge-3)
 
-### - [Challenge 4](#challenge-4)
+### [Challenge 4 - Puck and Target](#challenge-4)
 
-### - [Challenge 5](#challenge-5)
+### [Challenge 5 - You Lose!](#challenge-5)
 
-### - [Challenge 6](#challenge-6)
+### [Challenge 6 - Bouncy Ball Ball Bonanza](#challenge-6)
 
-### - [Challenge 7](#challenge-7)
+### [Challenge 7 - Boingo](#challenge-7)
 
-### - [Challenge 8](#challenge-8)
+### [Challenge 8 - Lines](#challenge-8)
 
 ---
 
