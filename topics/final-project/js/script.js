@@ -2,18 +2,19 @@
  * Final Project
  * Ilianna Faoro
  *
- * HOW EMBARRASSING! I HAVE NO DESCRIPTION OF MY PROJECT!
- * PLEASE REMOVE A GRADE FROM MY WORK IF IT'S GRADED!
+ *
  */
 
 "use strict";
 
-/**
- * OH LOOK I DIDN'T DESCRIBE SETUP!!
- */
-function setup() {}
+// Variables
 
-/**
- * OOPS I DIDN'T DESCRIBE WHAT MY DRAW DOES!
- */
-function draw() {}
+// Create a canvas to work on
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+// Make it blue
+function draw() {
+  background("lightblue");
+}
