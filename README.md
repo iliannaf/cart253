@@ -2,8 +2,6 @@
 
 ## [Final Project](final-project.md)
 
-Everything Related to the final project.
-
 ## [Journal Entries](journal.md)
 
 ## [Weekly Challenges](challenges.md)
