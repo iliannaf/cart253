@@ -14,6 +14,8 @@
 
 ### [Challenge 8 - Lines](#challenge-8)
 
+### [Challenge 9 - Data](#challenge-9)
+
 ---
 
 ### [Challenge 2: Landscape](topics/weekly-challenges/instructions-challenge/index.html) {#challenge-2}
@@ -55,6 +57,12 @@
 ### [Challenge 8: Lines](topics/weekly-challenges/loops-challenge/index.html) {#challenge-8}
 
 <img src="topics/version-control/version-control-workflow/images/Lines.png" alt="Lines" width="400">
+
+---
+
+### [Challenge 9: Data](topics/weekly-challenges/data-challenge/index.html) {#challenge-9}
+
+<img src="topics/version-control/version-control-workflow/images/data.png" alt="Data" width="400">
 
 ---
 
