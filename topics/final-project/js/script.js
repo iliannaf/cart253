@@ -33,6 +33,14 @@ function setup() {
 function draw() {
   background("lightblue");
 
+  // Title and sub heading
+  textAlign(CENTER, CENTER);
+  textSize(35);
+  fill(0);
+  text("Title", canvasW / 2, canvasH * 0.15);
+  textSize(25);
+  text("Pick a game", canvasW / 2, canvasH * 0.3);
+
   // Add buttons for games
 
   // Button 1
