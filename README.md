@@ -1,5 +1,7 @@
 # Ilianna's CART253 Website
 
+## [Final Project](final-project.md)
+
 ## [Journal Entries](journal.md)
 
 ## [Weekly Challenges](challenges.md)
