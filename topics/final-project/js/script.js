@@ -15,8 +15,13 @@ let canvasW = 1200;
 let canvasH = 700;
 
 // Buttons
-let buttonH = canvasH * 0.8;
+let buttonY = canvasH * 0.8;
 let buttonSize = 110;
+let button1x = canvasW * 0.1;
+let button2x = canvasW * 0.3;
+let button3x = canvasW * 0.5;
+let button4x = canvasW * 0.7;
+let button5x = canvasW * 0.9;
 
 // Create a canvas to work on
 function setup() {
@@ -28,18 +33,62 @@ function draw() {
   background("lightblue");
 
   // Add buttons for games
-  fill(0);
-  circle(canvasW * 0.1, buttonH, buttonSize);
 
+  // Button 1
   fill(0);
-  circle(canvasW * 0.3, buttonH, buttonSize);
+  circle(button1x, buttonY, buttonSize);
 
+  // Button 2
   fill(0);
-  circle(canvasW * 0.5, buttonH, buttonSize);
+  circle(button2x, buttonY, buttonSize);
 
+  // Button 3
   fill(0);
-  circle(canvasW * 0.7, buttonH, buttonSize);
+  circle(button3x, buttonY, buttonSize);
 
+  // Button 4
   fill(0);
-  circle(canvasW * 0.9, buttonH, buttonSize);
+  circle(button4x, buttonY, buttonSize);
+
+  // Button 5
+  fill(0);
+  circle(button5x, buttonY, buttonSize);
+}
+
+function startGame1() {}
+
+function startGame2() {}
+
+function startGame3() {}
+
+function startGame4() {}
+
+function startGame5() {}
+
+// click buttons to start games
+function mousePressed() {
+  // Button 1
+  if (dist(mouseX, mouseY, button1x, buttonY) < buttonSize / 2) {
+    startGame1();
+  }
+
+  // Button 2
+  if (dist(mouseX, mouseY, button2x, buttonY) < buttonSize / 2) {
+    startGame2();
+  }
+
+  // Button 3
+  if (dist(mouseX, mouseY, button3x, buttonY) < buttonSize / 2) {
+    startGame3();
+  }
+
+  // Button 4
+  if (dist(mouseX, mouseY, button4x, buttonY) < buttonSize / 2) {
+    startGame4();
+  }
+
+  // Button 5
+  if (dist(mouseX, mouseY, button5x, buttonY) < buttonSize / 2) {
+    startGame5();
+  }
 }
