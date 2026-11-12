@@ -17,6 +17,7 @@ let canvasH = 700;
 // Buttons
 let buttonY = canvasH * 0.8;
 let buttonSize = 110;
+let buttonHoverSize = 125;
 let button1x = canvasW * 0.1;
 let button2x = canvasW * 0.3;
 let button3x = canvasW * 0.5;
@@ -55,15 +56,25 @@ function draw() {
   circle(button5x, buttonY, buttonSize);
 }
 
-function startGame1() {}
+function startGame1() {
+  background("green");
+}
 
-function startGame2() {}
+function startGame2() {
+  background("green");
+}
 
-function startGame3() {}
+function startGame3() {
+  background("green");
+}
 
-function startGame4() {}
+function startGame4() {
+  background("green");
+}
 
-function startGame5() {}
+function startGame5() {
+  background("green");
+}
 
 // click buttons to start games
 function mousePressed() {
