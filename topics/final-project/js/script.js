@@ -3,6 +3,7 @@
  * Ilianna Faoro
  *
  * 5 mini games that the user can choose from
+ * Game 1: Starry Sky - Creating constellations
  *
  */
 
@@ -10,14 +11,10 @@
 
 // VARIABLES
 
-// Canvas
+// Main Page
 let canvasW = 1200;
 let canvasH = 700;
-
-// Menu
 let currentPage = "menu";
-
-// Buttons
 let buttonY = canvasH * 0.8;
 let buttonSize = 110;
 let buttonHoverSize = 125;
@@ -27,12 +24,23 @@ let button3x = canvasW * 0.5;
 let button4x = canvasW * 0.7;
 let button5x = canvasW * 0.9;
 
-// Create a canvas to work on
+// Game 1
+let numStars = 130;
+let stars = [];
+let constellations = [];
+let currentConstellation = [];
+let lastStar = undefined;
+
+// SET UP
 function setup() {
   createCanvas(canvasW, canvasH);
+  createStars();
 }
 
 // functions for each game page
+
+// MENU
+
 function menuPage() {
   background("lightblue");
 
@@ -53,26 +61,102 @@ function menuPage() {
   circle(button5x, buttonY, buttonSize);
 }
 
+// GAME 1
 function game1Page() {
-  background("green");
-  text("Game 1", canvasW / 2, canvasH / 2);
+
+background(34, 39, 92);
+
+// instructions
+push();
+fill("white");
+rect(0, 0, canvasW, 30,);
+fill("black");
+textSize(16);
+textAlign(CENTER);
+text("Click on Stars to Create Constellations. Press N to Start a New Constellation. Press H to Go Back to the Home Menu / Restart the Game.", canvasW / 2, 18);
+pop();
+
+// draw lines for star connections
+push();
+stroke(150, 180, 255);
+strokeWeight(1);
+
+  for (let c = 0; c < constellations.length; c++) {
+
+    for (let i = 0; i < constellations[c].length; i++) {
+
+    let a = constellations[c][i][0];
+    let b = constellations[c][i][1];
+
+      line(
+        stars[a][0], stars[a][1],
+        stars[b][0], stars[b][1]
+      );
+    }
+  }
+  pop();
+
+  push();
+  stroke(150, 180, 255);
+  strokeWeight(1);
+
+    for (let i = 0; i < currentConstellation.length; i++) {
+
+    let a = currentConstellation[i][0];
+    let b = currentConstellation[i][1];
+
+    line(
+      stars[a][0], stars[a][1],
+      stars[b][0], stars[b][1]
+    );
+  }
+    pop();
+
+// draw stars
+noStroke();
+fill(255);
+
+  for (let i = 0; i < stars.length; i++) {
+    circle(stars[i][0], stars[i][1], 4);
+  }
 }
+
+function createStars() {
+  stars = [];
+
+  for (let i = 0; i < numStars; i++) {
+    stars[i] = [random(canvasW), random(30, canvasH)];
+  }
+}
+
+function startGame1() {
+  constellations = [];
+  currentConstellation = [];
+  lastStar = undefined;
+  createStars();
+  currentPage = "game1";
+}
+
+// GAME 2
 
 function game2Page() {
   background("red");
   text("Game 2", canvasW / 2, canvasH / 2);
 }
 
+// Game 3
 function game3Page() {
   background("yellow");
   text("Game 3", canvasW / 2, canvasH / 2);
 }
 
+// Game 4
 function game4Page() {
   background("purple");
   text("Game 4", canvasW / 2, canvasH / 2);
 }
 
+// Game 5
 function game5Page() {
   background("orange");
   text("Game 5", canvasW / 2, canvasH / 2);
@@ -110,30 +194,71 @@ function mousePressed() {
   if (currentPage === "menu") {
 
     if (dist(mouseX, mouseY, button1x, buttonY) < buttonSize / 2) {
-      currentPage = "game1";
+      startGame1();
     }
 
-    if (dist(mouseX, mouseY, button2x, buttonY) < buttonSize / 2) {
+    else if (dist(mouseX, mouseY, button2x, buttonY) < buttonSize / 2) {
       currentPage = "game2";
     }
 
-    if (dist(mouseX, mouseY, button3x, buttonY) < buttonSize / 2) {
+    else if (dist(mouseX, mouseY, button3x, buttonY) < buttonSize / 2) {
       currentPage = "game3";
     }
 
-    if (dist(mouseX, mouseY, button4x, buttonY) < buttonSize / 2) {
+    else if (dist(mouseX, mouseY, button4x, buttonY) < buttonSize / 2) {
       currentPage = "game4";
     }
 
-    if (dist(mouseX, mouseY, button5x, buttonY) < buttonSize / 2) {
+    else if (dist(mouseX, mouseY, button5x, buttonY) < buttonSize / 2) {
       currentPage = "game5";
+    }
+  }
+
+  // GAME 1 constellations using the mouse
+  else if (currentPage === "game1") {
+
+    for (let i = 0; i < stars.length; i++) {
+
+      let d = dist(mouseX, mouseY, stars[i][0], stars[i][1]);
+
+      if (d < 7) {
+
+        if (lastStar !== i) {
+
+          if (lastStar !== undefined) {
+            currentConstellation.push([lastStar, i]);
+          }
+
+          lastStar = i;
+        }
+
+        break;
+      }
     }
   }
 }
 
-// press H to go back to the home page
+// press keys to do different things
 function keyPressed() {
+
+  // Return home with H
   if (key === 'h' || key === 'H') {
     currentPage = "menu";
+  }
+
+  // Start a new constellation with N
+  if (key === 'n' || key === "N") {
+
+    if (currentPage === "game1") {
+
+      // Stop the current constellation
+      if (currentConstellation.length > 0) {
+        constellations.push(currentConstellation);
+      }
+
+      // Start a new constellation
+      currentConstellation = [];
+      lastStar = undefined;
+    }
   }
 }
