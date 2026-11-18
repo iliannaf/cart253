@@ -14,6 +14,9 @@
 let canvasW = 1200;
 let canvasH = 700;
 
+// Menu
+let currentPage = "menu";
+
 // Buttons
 let buttonY = canvasH * 0.8;
 let buttonSize = 110;
@@ -29,11 +32,11 @@ function setup() {
   createCanvas(canvasW, canvasH);
 }
 
-// Make it blue
-function draw() {
+// functions for each game page
+function menuPage() {
   background("lightblue");
 
-  // Title and sub heading
+  // write instructions
   textAlign(CENTER, CENTER);
   textSize(35);
   fill(0);
@@ -41,73 +44,96 @@ function draw() {
   textSize(25);
   text("Pick a game", canvasW / 2, canvasH * 0.3);
 
-  // Add buttons for games
-
-  // Button 1
+  // make buttons to start games
   fill(0);
   circle(button1x, buttonY, buttonSize);
-
-  // Button 2
-  fill(0);
   circle(button2x, buttonY, buttonSize);
-
-  // Button 3
-  fill(0);
   circle(button3x, buttonY, buttonSize);
-
-  // Button 4
-  fill(0);
   circle(button4x, buttonY, buttonSize);
-
-  // Button 5
-  fill(0);
   circle(button5x, buttonY, buttonSize);
 }
 
-function startGame1() {
+function game1Page() {
   background("green");
+  text("Game 1", canvasW / 2, canvasH / 2);
 }
 
-function startGame2() {
-  background("green");
+function game2Page() {
+  background("red");
+  text("Game 2", canvasW / 2, canvasH / 2);
 }
 
-function startGame3() {
-  background("green");
+function game3Page() {
+  background("yellow");
+  text("Game 3", canvasW / 2, canvasH / 2);
 }
 
-function startGame4() {
-  background("green");
+function game4Page() {
+  background("purple");
+  text("Game 4", canvasW / 2, canvasH / 2);
 }
 
-function startGame5() {
-  background("green");
+function game5Page() {
+  background("orange");
+  text("Game 5", canvasW / 2, canvasH / 2);
+}
+
+// determine which page will be on screen
+function draw() {
+  if (currentPage === "menu") {
+    menuPage();
+  }
+
+  else if (currentPage === "game1") {
+    game1Page();
+  }
+
+  else if (currentPage === "game2") {
+    game2Page();
+  }
+
+  else if (currentPage === "game3") {
+    game3Page();
+  }
+
+  else if (currentPage === "game4") {
+    game4Page();
+  }
+
+  else if (currentPage === "game5") {
+    game5Page();
+  }
 }
 
 // click buttons to start games
 function mousePressed() {
-  // Button 1
-  if (dist(mouseX, mouseY, button1x, buttonY) < buttonSize / 2) {
-    startGame1();
-  }
+  if (currentPage === "menu") {
 
-  // Button 2
-  if (dist(mouseX, mouseY, button2x, buttonY) < buttonSize / 2) {
-    startGame2();
-  }
+    if (dist(mouseX, mouseY, button1x, buttonY) < buttonSize / 2) {
+      currentPage = "game1";
+    }
 
-  // Button 3
-  if (dist(mouseX, mouseY, button3x, buttonY) < buttonSize / 2) {
-    startGame3();
-  }
+    if (dist(mouseX, mouseY, button2x, buttonY) < buttonSize / 2) {
+      currentPage = "game2";
+    }
 
-  // Button 4
-  if (dist(mouseX, mouseY, button4x, buttonY) < buttonSize / 2) {
-    startGame4();
-  }
+    if (dist(mouseX, mouseY, button3x, buttonY) < buttonSize / 2) {
+      currentPage = "game3";
+    }
 
-  // Button 5
-  if (dist(mouseX, mouseY, button5x, buttonY) < buttonSize / 2) {
-    startGame5();
+    if (dist(mouseX, mouseY, button4x, buttonY) < buttonSize / 2) {
+      currentPage = "game4";
+    }
+
+    if (dist(mouseX, mouseY, button5x, buttonY) < buttonSize / 2) {
+      currentPage = "game5";
+    }
+  }
+}
+
+// press H to go back to the home page
+function keyPressed() {
+  if (key === 'h' || key === 'H') {
+    currentPage = "menu";
   }
 }
