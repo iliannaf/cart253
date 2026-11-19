@@ -28,7 +28,7 @@ For the remaining mini games, I am considering taking inspiration from some of m
 
 So far, I have used several concepts that we learned throughout the semester, including variables, functions, arrays, loops, events, and conditionals. I am glad that I have been able to incorporate almost all of these concepts into my project. However, I would still like to experiment with using them in different ways to continue improving my coding skills.
 
-<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400">
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="500">
 
 ---
 
@@ -36,7 +36,7 @@ So far, I have used several concepts that we learned throughout the semester, in
 
 <!-- Journal Text
 
-<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400"> -->
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="500"> -->
 
 ---
 
@@ -44,7 +44,7 @@ So far, I have used several concepts that we learned throughout the semester, in
 
 <!-- Journal Text
 
-<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400"> -->
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="500"> -->
 
 ---
 
@@ -52,7 +52,7 @@ So far, I have used several concepts that we learned throughout the semester, in
 
 <!-- Journal Text
 
-<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400"> -->
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="500"> -->
 
 ---
 
