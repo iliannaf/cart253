@@ -60,7 +60,7 @@ const game2target = {
 
 const game2target2 = {
   x: canvasW * 0.02,
-  y: cnavasH * 0.5,
+  y: canvasH * 0.5,
   size: 125,
   fill: "maroon",
 };
@@ -175,8 +175,14 @@ function startGame1() {
 // GAME 2
 
 function game2Page() {
-  background("red");
-  text("Game 2", canvasW / 2, canvasH / 2);
+  background("silver");
+  fill("black");
+  line(canvasW / 2, 0, canvasW / 2, canvasH);
+  textSize(18);
+  text("Team 1:", canvasW * 0.04, canvasH * 0.05);
+  text(game2score1, canvasW * 0.12, canvasH * 0.05);
+  text("Team 2:", canvasW * 0.85, canvasH * 0.05);
+  text(game2score2, canvasW * 0.93, canvasH * 0.05);
 }
 
 // Game 3
