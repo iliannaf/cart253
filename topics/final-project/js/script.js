@@ -182,13 +182,9 @@ function game2Page() {
   background("silver");
   fill("black");
   line(canvasW / 2, 0, canvasW / 2, canvasH);
-  textSize(18);
-  text("Team 1:", canvasW * 0.055, canvasH * 0.05);
-  text(game2score1, canvasW * 0.098, canvasH * 0.05);
-  text("WASD to move", canvasW * 0.07, canvasH * 0.088);
-  text("Team 2:", canvasW * 0.92, canvasH * 0.05);
-  text(game2score2, canvasW * 0.96, canvasH * 0.05);
-  text("IJKL to move", canvasW * 0.93, canvasH * 0.088);
+  noFill();
+  ellipse(canvasW / 2, canvasH / 2, 300);
+  game2instructions();
 
   if (currentPage === "game2") {
     // Player 2 movement (W, A, S, D)
@@ -209,6 +205,9 @@ function game2Page() {
   drawPuck();
   drawTarget();
   drawTarget2();
+  game2checkGoal();
+  game2checkGoal2();
+  game2win();
 }
 
 // Game 3
@@ -320,6 +319,17 @@ function keyPressed() {
 }
 
 // GAME 2
+function game2instructions() {
+  fill("black");
+  textSize(18);
+  text("Team 1:", canvasW * 0.055, canvasH * 0.05);
+  text(game2score1, canvasW * 0.098, canvasH * 0.05);
+  text("WASD to move", canvasW * 0.07, canvasH * 0.088);
+  text("Team 2:", canvasW * 0.92, canvasH * 0.05);
+  text(game2score2, canvasW * 0.96, canvasH * 0.05);
+  text("IJKL to move", canvasW * 0.931, canvasH * 0.088);
+}
+
 function drawGame2Player1() {
   push();
   noStroke();
@@ -358,4 +368,43 @@ function drawTarget2() {
   fill(game2target2.fill);
   ellipse(game2target2.x, game2target2.y, game2target2.size);
   pop();
+}
+
+function game2checkGoal() {
+  // Calculate distance between circles' centres
+  const d = dist(puck.x, puck.y, game2target.x, game2target.y);
+  // Check if that distance is smaller than their two radii,
+  // because if it is, they are overlapping
+  const overlap = d < game2target.size / 2 + puck.size / 2;
+  // Set fill based on whether they overlap
+  if (overlap) {
+    puck.x = rink.width / 2;
+    puck.y = rink.height / 2;
+    score1++;
+  } else {
+    game2target.fill = "maroon";
+  }
+}
+
+function game2checkGoal2() {
+  // Calculate distance between circles' centres
+  const d = dist(puck.x, puck.y, game2target2.x, game2target2.y);
+  // Check if that distance is smaller than their two radii,
+  // because if it is, they are overlapping
+  const overlap = d < game2target2.size / 2 + puck.size / 2;
+  // Set fill based on whether they overlap
+  if (overlap) {
+    puck.x = rink.width / 2;
+    puck.y = rink.height / 2;
+    score2++;
+  } else {
+    game2target2.fill = "navy";
+  }
+}
+
+function game2win() {
+  if (game2score1 === 5 || game2score2 === 5) {
+    game2score1 = 0;
+    game2score2 = 0;
+  }
 }
