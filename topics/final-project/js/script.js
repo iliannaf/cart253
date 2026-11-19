@@ -15,14 +15,17 @@
 let canvasW = 1200;
 let canvasH = 700;
 let currentPage = "menu";
-let buttonY = canvasH * 0.8;
-let buttonSize = 110;
-let buttonHoverSize = 125;
-let button1x = canvasW * 0.1;
-let button2x = canvasW * 0.3;
-let button3x = canvasW * 0.5;
-let button4x = canvasW * 0.7;
-let button5x = canvasW * 0.9;
+
+const menuButton = {
+  size: 110,
+  hoverSize: 125,
+  y: canvasH * 0.8,
+  x1: canvasW * 0.1,
+  x2: canvasW * 0.3,
+  x3: canvasW * 0.5,
+  x4: canvasW * 0.7,
+  x5: canvasW * 0.9,
+};
 
 // Game 1
 let numStars = 130;
@@ -30,6 +33,8 @@ let stars = [];
 let constellations = [];
 let currentConstellation = [];
 let lastStar = undefined;
+
+// Game 2
 
 // SET UP
 function setup() {
@@ -54,44 +59,42 @@ function menuPage() {
 
   // make buttons to start games
   fill(0);
-  circle(button1x, buttonY, buttonSize);
-  circle(button2x, buttonY, buttonSize);
-  circle(button3x, buttonY, buttonSize);
-  circle(button4x, buttonY, buttonSize);
-  circle(button5x, buttonY, buttonSize);
+  circle(menuButton.x1, menuButton.y, menuButton.size);
+  circle(menuButton.x2, menuButton.y, menuButton.size);
+  circle(menuButton.x3, menuButton.y, menuButton.size);
+  circle(menuButton.x4, menuButton.y, menuButton.size);
+  circle(menuButton.x5, menuButton.y, menuButton.size);
 }
 
 // GAME 1
 function game1Page() {
+  background(34, 39, 92);
 
-background(34, 39, 92);
+  // instructions
+  push();
+  fill("white");
+  rect(0, 0, canvasW, 30);
+  fill("black");
+  textSize(16);
+  textAlign(CENTER);
+  text(
+    "Click on Stars to Create Constellations. Press N to Start a New Constellation. Press H to Go Back to the Home Menu / Restart the Game.",
+    canvasW / 2,
+    18,
+  );
+  pop();
 
-// instructions
-push();
-fill("white");
-rect(0, 0, canvasW, 30,);
-fill("black");
-textSize(16);
-textAlign(CENTER);
-text("Click on Stars to Create Constellations. Press N to Start a New Constellation. Press H to Go Back to the Home Menu / Restart the Game.", canvasW / 2, 18);
-pop();
-
-// draw lines for star connections
-push();
-stroke(150, 180, 255);
-strokeWeight(1);
+  // draw lines for star connections
+  push();
+  stroke(150, 180, 255);
+  strokeWeight(1);
 
   for (let c = 0; c < constellations.length; c++) {
-
     for (let i = 0; i < constellations[c].length; i++) {
+      let a = constellations[c][i][0];
+      let b = constellations[c][i][1];
 
-    let a = constellations[c][i][0];
-    let b = constellations[c][i][1];
-
-      line(
-        stars[a][0], stars[a][1],
-        stars[b][0], stars[b][1]
-      );
+      line(stars[a][0], stars[a][1], stars[b][0], stars[b][1]);
     }
   }
   pop();
@@ -100,21 +103,17 @@ strokeWeight(1);
   stroke(150, 180, 255);
   strokeWeight(1);
 
-    for (let i = 0; i < currentConstellation.length; i++) {
-
+  for (let i = 0; i < currentConstellation.length; i++) {
     let a = currentConstellation[i][0];
     let b = currentConstellation[i][1];
 
-    line(
-      stars[a][0], stars[a][1],
-      stars[b][0], stars[b][1]
-    );
+    line(stars[a][0], stars[a][1], stars[b][0], stars[b][1]);
   }
-    pop();
+  pop();
 
-// draw stars
-noStroke();
-fill(255);
+  // draw stars
+  noStroke();
+  fill(255);
 
   for (let i = 0; i < stars.length; i++) {
     circle(stars[i][0], stars[i][1], 4);
@@ -166,25 +165,15 @@ function game5Page() {
 function draw() {
   if (currentPage === "menu") {
     menuPage();
-  }
-
-  else if (currentPage === "game1") {
+  } else if (currentPage === "game1") {
     game1Page();
-  }
-
-  else if (currentPage === "game2") {
+  } else if (currentPage === "game2") {
     game2Page();
-  }
-
-  else if (currentPage === "game3") {
+  } else if (currentPage === "game3") {
     game3Page();
-  }
-
-  else if (currentPage === "game4") {
+  } else if (currentPage === "game4") {
     game4Page();
-  }
-
-  else if (currentPage === "game5") {
+  } else if (currentPage === "game5") {
     game5Page();
   }
 }
@@ -192,39 +181,41 @@ function draw() {
 // click buttons to start games
 function mousePressed() {
   if (currentPage === "menu") {
-
-    if (dist(mouseX, mouseY, button1x, buttonY) < buttonSize / 2) {
+    if (
+      dist(mouseX, mouseY, menuButton.x1, menuButton.y) <
+      menuButton.size / 2
+    ) {
       startGame1();
-    }
-
-    else if (dist(mouseX, mouseY, button2x, buttonY) < buttonSize / 2) {
+    } else if (
+      dist(mouseX, mouseY, menuButton.x2, menuButton.y) <
+      menuButton.size / 2
+    ) {
       currentPage = "game2";
-    }
-
-    else if (dist(mouseX, mouseY, button3x, buttonY) < buttonSize / 2) {
+    } else if (
+      dist(mouseX, mouseY, menuButton.x3, menuButton.y) <
+      menuButton.size / 2
+    ) {
       currentPage = "game3";
-    }
-
-    else if (dist(mouseX, mouseY, button4x, buttonY) < buttonSize / 2) {
+    } else if (
+      dist(mouseX, mouseY, menuButton.x4, menuButton.y) <
+      menuButton.size / 2
+    ) {
       currentPage = "game4";
-    }
-
-    else if (dist(mouseX, mouseY, button5x, buttonY) < buttonSize / 2) {
+    } else if (
+      dist(mouseX, mouseY, menuButton.x5, menuButton.y) <
+      menuButton.size / 2
+    ) {
       currentPage = "game5";
     }
   }
 
   // GAME 1 constellations using the mouse
   else if (currentPage === "game1") {
-
     for (let i = 0; i < stars.length; i++) {
-
       let d = dist(mouseX, mouseY, stars[i][0], stars[i][1]);
 
       if (d < 7) {
-
         if (lastStar !== i) {
-
           if (lastStar !== undefined) {
             currentConstellation.push([lastStar, i]);
           }
@@ -240,17 +231,14 @@ function mousePressed() {
 
 // press keys to do different things
 function keyPressed() {
-
   // Return home with H
-  if (key === 'h' || key === 'H') {
+  if (key === "h" || key === "H") {
     currentPage = "menu";
   }
 
   // Start a new constellation with N
-  if (key === 'n' || key === "N") {
-
+  if (key === "n" || key === "N") {
     if (currentPage === "game1") {
-
       // Stop the current constellation
       if (currentConstellation.length > 0) {
         constellations.push(currentConstellation);
