@@ -15,7 +15,6 @@
 let canvasW = 1200;
 let canvasH = 700;
 let currentPage = "menu";
-
 const menuButton = {
   size: 110,
   hoverSize: 125,
