@@ -77,7 +77,7 @@ function game1Page() {
   textSize(16);
   textAlign(CENTER);
   text(
-    "Click on Stars to Create Constellations. Press N to Start a New Constellation. Press H to Go Back to the Home Menu / Restart the Game.",
+    "Click on stars to create constellations. Press N to start a new constellation. Press H to go back to the home menu / restart the game.",
     canvasW / 2,
     18,
   );
