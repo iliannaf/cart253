@@ -4,6 +4,12 @@
 
 ## [Journal 1 - November 19, 2026](#final-journal-1)
 
+## [Journal 2 - November 26, 2026](#final-journal-2)
+
+## [Journal 3 - December 3, 2026](#final-journal-3)
+
+## [Journal 4 - December 10, 2026](#final-journal-4)
+
 ---
 
 ## Journal Entries
@@ -27,6 +33,26 @@ So far, I have used several concepts that we learned throughout the semester, in
 ---
 
 ### Journal 2 - November 26, 2026 {#final-journal-2}
+
+<!-- Journal Text
+
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400"> -->
+
+---
+
+### Journal 3 - December 3, 2026 {#final-journal-3}
+
+<!-- Journal Text
+
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400"> -->
+
+---
+
+### Journal 4 - December 10, 2026 {#final-journal-4}
+
+<!-- Journal Text
+
+<img src="topics\version-control\version-control-workflow\images\starrySky2.png" alt="Starry Sky V2" width="400"> -->
 
 ---
 
