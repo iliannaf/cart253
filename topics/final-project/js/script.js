@@ -312,32 +312,6 @@ function keyPressed() {
       lastStar = undefined;
     }
   }
-
-  // // Player 2 movement
-  // if (currentPage === "game2") {
-  //   if (key === "a" || key === "A") {
-  //     game2player2.x -= 5;
-  //   } else if (key === "d" || key === "D") {
-  //     game2player2.x += 5;
-  //   } else if (key === "w" || key === "W") {
-  //     game2player2.y -= 5;
-  //   } else if (key === "s" || key === "S") {
-  //     game2player2.y += 5;
-  //   }
-  // }
-
-  // // Player 1 movement
-  // if (currentPage === "game2") {
-  //   if (key === "j" || key === "J") {
-  //     game2player1.x -= 5;
-  //   } else if (key === "l" || key === "L") {
-  //     game2player1.x += 5;
-  //   } else if (key === "i" || key === "I") {
-  //     game2player1.y -= 5;
-  //   } else if (key === "k" || key === "K") {
-  //     game2player1.y += 5;
-  //   }
-  // }
 }
 
 // GAME 2
