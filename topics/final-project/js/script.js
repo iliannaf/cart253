@@ -34,11 +34,48 @@ let currentConstellation = [];
 let lastStar = undefined;
 
 // Game 2
+const puck = {
+  x: canvasW / 2,
+  y: canvasH / 2,
+  size: 60,
+  fill: "black",
+};
+
+const game2player1 = {
+  size: 75,
+  fill: "red",
+};
+
+const game2player2 = {
+  size: 75,
+  fill: "blue",
+};
+
+const game2target = {
+  x: canvasW * 0.98,
+  y: canvasH * 0.5,
+  size: 125,
+  fill: "navy",
+};
+
+const game2target2 = {
+  x: canvasW * 0.02,
+  y: cnavasH * 0.5,
+  size: 125,
+  fill: "maroon",
+};
+
+let game2score1;
+let game2score2;
 
 // SET UP
 function setup() {
   createCanvas(canvasW, canvasH);
+  // Game 1
   createStars();
+  // Game 2
+  game2score1 = 0;
+  game2score2 = 0;
 }
 
 // functions for each game page
