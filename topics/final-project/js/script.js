@@ -37,7 +37,7 @@ let lastStar = undefined;
 const puck = {
   x: canvasW / 2,
   y: canvasH / 2,
-  size: 60,
+  size: 55,
   fill: "black",
 };
 
@@ -56,17 +56,17 @@ const game2player2 = {
 };
 
 const game2target = {
-  x: canvasW * 0.98,
+  x: canvasW * 0.999,
   y: canvasH * 0.5,
-  size: 125,
-  fill: "navy",
+  size: 250,
+  fill: "maroon",
 };
 
 const game2target2 = {
-  x: canvasW * 0.02,
+  x: canvasW * 0.001,
   y: canvasH * 0.5,
-  size: 125,
-  fill: "maroon",
+  size: 250,
+  fill: "navy",
 };
 
 let game2score1;
@@ -183,10 +183,12 @@ function game2Page() {
   fill("black");
   line(canvasW / 2, 0, canvasW / 2, canvasH);
   textSize(18);
-  text("Team 1:", canvasW * 0.04, canvasH * 0.05);
-  text(game2score1, canvasW * 0.12, canvasH * 0.05);
-  text("Team 2:", canvasW * 0.85, canvasH * 0.05);
-  text(game2score2, canvasW * 0.93, canvasH * 0.05);
+  text("Team 1:", canvasW * 0.055, canvasH * 0.05);
+  text(game2score1, canvasW * 0.098, canvasH * 0.05);
+  text("WASD to move", canvasW * 0.07, canvasH * 0.088);
+  text("Team 2:", canvasW * 0.92, canvasH * 0.05);
+  text(game2score2, canvasW * 0.96, canvasH * 0.05);
+  text("IJKL to move", canvasW * 0.93, canvasH * 0.088);
 
   if (currentPage === "game2") {
     // Player 2 movement (W, A, S, D)
@@ -204,6 +206,9 @@ function game2Page() {
 
   drawGame2Player1();
   drawGame2Player2();
+  drawPuck();
+  drawTarget();
+  drawTarget2();
 }
 
 // Game 3
@@ -328,5 +333,29 @@ function drawGame2Player2() {
   noStroke();
   fill(game2player2.fill);
   ellipse(game2player2.x, game2player2.y, game2player2.size);
+  pop();
+}
+
+function drawPuck() {
+  push();
+  noStroke();
+  fill(puck.fill);
+  ellipse(puck.x, puck.y, puck.size);
+  pop();
+}
+
+function drawTarget() {
+  push();
+  noStroke();
+  fill(game2target.fill);
+  ellipse(game2target.x, game2target.y, game2target.size);
+  pop();
+}
+
+function drawTarget2() {
+  push();
+  noStroke();
+  fill(game2target2.fill);
+  ellipse(game2target2.x, game2target2.y, game2target2.size);
   pop();
 }
