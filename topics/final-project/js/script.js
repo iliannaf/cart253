@@ -42,11 +42,15 @@ const puck = {
 };
 
 const game2player1 = {
+  x: canvasW * 0.75,
+  y: canvasH * 0.5,
   size: 75,
   fill: "red",
 };
 
 const game2player2 = {
+  x: canvasW * 0.25,
+  y: canvasH * 0.5,
   size: 75,
   fill: "blue",
 };
@@ -183,6 +187,23 @@ function game2Page() {
   text(game2score1, canvasW * 0.12, canvasH * 0.05);
   text("Team 2:", canvasW * 0.85, canvasH * 0.05);
   text(game2score2, canvasW * 0.93, canvasH * 0.05);
+
+  if (currentPage === "game2") {
+    // Player 2 movement (W, A, S, D)
+    if (keyIsDown(65)) game2player2.x -= 5; // A
+    if (keyIsDown(68)) game2player2.x += 5; // D
+    if (keyIsDown(87)) game2player2.y -= 5; // W
+    if (keyIsDown(83)) game2player2.y += 5; // S
+
+    // Player 1 movement (I, J, K, L)
+    if (keyIsDown(74)) game2player1.x -= 5; // J
+    if (keyIsDown(76)) game2player1.x += 5; // L
+    if (keyIsDown(73)) game2player1.y -= 5; // I
+    if (keyIsDown(75)) game2player1.y += 5; // K
+  }
+
+  drawGame2Player1();
+  drawGame2Player2();
 }
 
 // Game 3
@@ -291,4 +312,47 @@ function keyPressed() {
       lastStar = undefined;
     }
   }
+
+  // // Player 2 movement
+  // if (currentPage === "game2") {
+  //   if (key === "a" || key === "A") {
+  //     game2player2.x -= 5;
+  //   } else if (key === "d" || key === "D") {
+  //     game2player2.x += 5;
+  //   } else if (key === "w" || key === "W") {
+  //     game2player2.y -= 5;
+  //   } else if (key === "s" || key === "S") {
+  //     game2player2.y += 5;
+  //   }
+  // }
+
+  // // Player 1 movement
+  // if (currentPage === "game2") {
+  //   if (key === "j" || key === "J") {
+  //     game2player1.x -= 5;
+  //   } else if (key === "l" || key === "L") {
+  //     game2player1.x += 5;
+  //   } else if (key === "i" || key === "I") {
+  //     game2player1.y -= 5;
+  //   } else if (key === "k" || key === "K") {
+  //     game2player1.y += 5;
+  //   }
+  // }
+}
+
+// GAME 2
+function drawGame2Player1() {
+  push();
+  noStroke();
+  fill(game2player1.fill);
+  ellipse(game2player1.x, game2player1.y, game2player1.size);
+  pop();
+}
+
+function drawGame2Player2() {
+  push();
+  noStroke();
+  fill(game2player2.fill);
+  ellipse(game2player2.x, game2player2.y, game2player2.size);
+  pop();
 }
