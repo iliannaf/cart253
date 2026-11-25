@@ -97,7 +97,7 @@ let currentPlayer = "X";
 let game3winner = "";
 let game3gameOver = false;
 
-let boardSize = 300;
+let boardSize = 400;
 let cellSize = boardSize / 3;
 let boardX = canvasW / 2 - boardSize / 2;
 let boardY = canvasH / 2 - boardSize / 2;
@@ -395,6 +395,10 @@ function mousePressed() {
       }
     }
   }
+
+  else if (currentPage === "game3") {
+    game3mousePressed();
+  }
 }
 
 // press keys to do different things
@@ -405,6 +409,7 @@ function keyPressed() {
     resetGame2();
     game2score1 = 0;
     game2score2 = 0;
+    restartGame3();
   }
 
   // Start a new constellation with N
@@ -429,6 +434,11 @@ function keyPressed() {
 
       resetGame2();
     }
+  }
+
+  // Restart Game 3
+  if (key === " " && currentPage === "game3") {
+    restartGame3();
   }
 }
 
@@ -668,3 +678,104 @@ function keyUpHandler(event) {
 
 window.addEventListener("keydown", keyDownHandler);
 window.addEventListener("keyup", keyUpHandler);
+
+function game3mousePressed() {
+  if (game3gameOver || game3winner !== "") {
+    return;
+  }
+
+  // Check if mouse is inside the board
+  if (
+    mouseX >= boardX &&
+    mouseX <= boardX + boardSize &&
+    mouseY >= boardY &&
+    mouseY <= boardY + boardSize
+  ) {
+    let col = floor((mouseX - boardX) / cellSize);
+    let row = floor((mouseY - boardY) / cellSize);
+
+    // Only play if the square is empty
+    if (board[row][col] === "") {
+      board[row][col] = currentPlayer;
+
+      checkGame3Winner();
+
+      // Switch players if nobody has won
+      if (game3winner === "" && !game3gameOver) {
+        if (currentPlayer === "X") {
+          currentPlayer = "O";
+        } else {
+          currentPlayer = "X";
+        }
+      }
+    }
+  }
+}
+
+function checkGame3Winner() {
+  // Check rows
+  for (let row = 0; row < 3; row++) {
+    if (
+      board[row][0] !== "" &&
+      board[row][0] === board[row][1] &&
+      board[row][1] === board[row][2]
+    ) {
+      game3winner = currentPlayer;
+    }
+  }
+
+  // Check columns
+  for (let col = 0; col < 3; col++) {
+    if (
+      board[0][col] !== "" &&
+      board[0][col] === board[1][col] &&
+      board[1][col] === board[2][col]
+    ) {
+      game3winner = currentPlayer;
+    }
+  }
+
+  // Check diagonals
+  if (
+    board[0][0] !== "" &&
+    board[0][0] === board[1][1] &&
+    board[1][1] === board[2][2]
+  ) {
+    game3winner = currentPlayer;
+  }
+
+  if (
+    board[0][2] !== "" &&
+    board[0][2] === board[1][1] &&
+    board[1][1] === board[2][0]
+  ) {
+    game3winner = currentPlayer;
+  }
+
+  // Check for a tie
+  let full = true;
+
+  for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 3; col++) {
+      if (board[row][col] === "") {
+        full = false;
+      }
+    }
+  }
+
+  if (game3winner === "" && full) {
+    game3gameOver = true;
+  }
+}
+
+function restartGame3() {
+  board = [
+    ["", "", ""],
+    ["", "", ""],
+    ["", "", ""]
+  ];
+
+  currentPlayer = "X";
+  game3winner = "";
+  game3gameOver = false;
+}
