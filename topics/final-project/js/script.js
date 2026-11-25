@@ -39,6 +39,9 @@ const puck = {
   y: canvasH / 2,
   size: 55,
   fill: "black",
+  speedX: 0,
+  speedY: 0,
+  friction: 0.98,
 };
 
 const game2player1 = {
@@ -68,6 +71,16 @@ const game2target2 = {
   size: 250,
   fill: "navy",
 };
+
+let blueUp = false;
+let blueDown = false;
+let blueLeft = false;
+let blueRight = false;
+
+let redUp = false;
+let redDown = false;
+let redLeft = false;
+let redRight = false;
 
 let game2score1;
 let game2score2;
@@ -180,28 +193,40 @@ function startGame1() {
 
 function game2Page() {
   background("silver");
-  fill("black");
+
+  // Draw the rink
+  push();
+  stroke("black");
+  strokeWeight(2);
   line(canvasW / 2, 0, canvasW / 2, canvasH);
+
   noFill();
+  stroke("black");
   ellipse(canvasW / 2, canvasH / 2, 300);
+  pop();
+
   game2instructions();
 
-  if (currentPage === "game2") {
-    // Player 2 movement (W, A, S, D)
-    if (keyIsDown(65)) game2player2.x -= 5; // A
-    if (keyIsDown(68)) game2player2.x += 5; // D
-    if (keyIsDown(87)) game2player2.y -= 5; // W
-    if (keyIsDown(83)) game2player2.y += 5; // S
+  if (game2score1 < 5 && game2score2 < 5) {
+    // BLUE PLAYER
+    if (blueUp) game2player2.y -= 5;
+    if (blueDown) game2player2.y += 5;
+    if (blueLeft) game2player2.x -= 5;
+    if (blueRight) game2player2.x += 5;
 
-    // Player 1 movement (I, J, K, L)
-    if (keyIsDown(74)) game2player1.x -= 5; // J
-    if (keyIsDown(76)) game2player1.x += 5; // L
-    if (keyIsDown(73)) game2player1.y -= 5; // I
-    if (keyIsDown(75)) game2player1.y += 5; // K
+    // RED PLAYER
+    if (redUp) game2player1.y -= 5;
+    if (redDown) game2player1.y += 5;
+    if (redLeft) game2player1.x -= 5;
+    if (redRight) game2player1.x += 5;
   }
 
+  playerHitsPuck(game2player1);
+  playerHitsPuck(game2player2);
+  movePuck();
   drawGame2Player1();
   drawGame2Player2();
+  constrainPlayersGame2()
   drawPuck();
   drawTarget();
   drawTarget2();
@@ -301,6 +326,9 @@ function keyPressed() {
   // Return home with H
   if (key === "h" || key === "H") {
     currentPage = "menu";
+    resetGame2();
+    game2score1 = 0;
+    game2score2 = 0;
   }
 
   // Start a new constellation with N
@@ -314,6 +342,16 @@ function keyPressed() {
       // Start a new constellation
       currentConstellation = [];
       lastStar = undefined;
+    }
+  }
+
+  // Restart Game 2
+  if (key === " " && currentPage === "game2") {
+    if (game2score1 >= 5 || game2score2 >= 5) {
+      game2score1 = 0;
+      game2score2 = 0;
+
+      resetGame2();
     }
   }
 }
@@ -354,6 +392,61 @@ function drawPuck() {
   pop();
 }
 
+function movePuck() {
+  // Move the puck
+  puck.x += puck.speedX;
+  puck.y += puck.speedY;
+
+  // Slow the puck down
+  puck.speedX *= puck.friction;
+  puck.speedY *= puck.friction;
+
+  // Stop very small movements
+  if (abs(puck.speedX) < 0.1) puck.speedX = 0;
+  if (abs(puck.speedY) < 0.1) puck.speedY = 0;
+
+  // Keep puck inside the canvas
+  if (puck.x < puck.size / 2) {
+    puck.x = puck.size / 2;
+    puck.speedX *= -1;
+  }
+
+  if (puck.x > canvasW - puck.size / 2) {
+    puck.x = canvasW - puck.size / 2;
+    puck.speedX *= -1;
+  }
+
+  if (puck.y < puck.size / 2 + 30) {
+    puck.y = puck.size / 2 + 30;
+    puck.speedY *= -1;
+  }
+
+  if (puck.y > canvasH - puck.size / 2) {
+    puck.y = canvasH - puck.size / 2;
+    puck.speedY *= -1;
+  }
+}
+
+function playerHitsPuck(player) {
+  let d = dist(player.x, player.y, puck.x, puck.y);
+
+  if (d < player.size / 2 + puck.size / 2) {
+
+    // Find direction from player to puck
+    let angle = atan2(puck.y - player.y, puck.x - player.x);
+
+    // Push puck away from player
+    puck.speedX = cos(angle) * 8;
+    puck.speedY = sin(angle) * 8;
+
+    // Move puck outside the player
+    let minDistance = player.size / 2 + puck.size / 2;
+
+    puck.x = player.x + cos(angle) * minDistance;
+    puck.y = player.y + sin(angle) * minDistance;
+  }
+}
+
 function drawTarget() {
   push();
   noStroke();
@@ -371,40 +464,131 @@ function drawTarget2() {
 }
 
 function game2checkGoal() {
-  // Calculate distance between circles' centres
-  const d = dist(puck.x, puck.y, game2target.x, game2target.y);
-  // Check if that distance is smaller than their two radii,
-  // because if it is, they are overlapping
+  const d = dist(
+    puck.x,
+    puck.y,
+    game2target.x,
+    game2target.y
+  );
+
   const overlap = d < game2target.size / 2 + puck.size / 2;
-  // Set fill based on whether they overlap
+
   if (overlap) {
-    puck.x = rink.width / 2;
-    puck.y = rink.height / 2;
-    score1++;
-  } else {
-    game2target.fill = "maroon";
+    game2score1++;
+
+    resetGame2();
   }
 }
 
 function game2checkGoal2() {
-  // Calculate distance between circles' centres
-  const d = dist(puck.x, puck.y, game2target2.x, game2target2.y);
-  // Check if that distance is smaller than their two radii,
-  // because if it is, they are overlapping
+  const d = dist(
+    puck.x,
+    puck.y,
+    game2target2.x,
+    game2target2.y
+  );
+
   const overlap = d < game2target2.size / 2 + puck.size / 2;
-  // Set fill based on whether they overlap
+
   if (overlap) {
-    puck.x = rink.width / 2;
-    puck.y = rink.height / 2;
-    score2++;
-  } else {
-    game2target2.fill = "navy";
+    game2score2++;
+
+    resetGame2();
   }
 }
 
+
 function game2win() {
-  if (game2score1 === 5 || game2score2 === 5) {
-    game2score1 = 0;
-    game2score2 = 0;
+  if (game2score1 >= 5 || game2score2 >= 5) {
+    // Dark background
+    fill(0, 0, 0, 180);
+    rect(0, 0, canvasW, canvasH);
+
+    // Winner message
+    textAlign(CENTER, CENTER);
+    textSize(45);
+
+    if (game2score1 >= 5) {
+      fill("blue");
+      text("Team 1 Wins!", canvasW / 2, canvasH / 2 - 30);
+    } else {
+      fill("red");
+      text("Team 2 Wins!", canvasW / 2, canvasH / 2 - 30);
+    }
+
+    fill("white");
+    textSize(22);
+    text("Press SPACE to play again", canvasW / 2, canvasH / 2 + 35);
   }
 }
+
+
+function constrainPlayersGame2() {
+  // Keep red player inside the canvas
+  game2player1.x = constrain(
+    game2player1.x,
+    game2player1.size / 2,
+    canvasW - game2player1.size / 2
+  );
+
+  game2player1.y = constrain(
+    game2player1.y,
+    30 + game2player1.size / 2,
+    canvasH - game2player1.size / 2
+  );
+
+  // Keep blue player inside the canvas
+  game2player2.x = constrain(
+    game2player2.x,
+    game2player2.size / 2,
+    canvasW - game2player2.size / 2
+  );
+
+  game2player2.y = constrain(
+    game2player2.y,
+    30 + game2player2.size / 2,
+    canvasH - game2player2.size / 2
+  );
+}
+
+function resetGame2() {
+  // Reset puck
+  puck.x = canvasW / 2;
+  puck.y = canvasH / 2;
+  puck.speedX = 0;
+  puck.speedY = 0;
+
+  // Reset players
+  game2player1.x = canvasW * 0.75;
+  game2player1.y = canvasH * 0.5;
+
+  game2player2.x = canvasW * 0.25;
+  game2player2.y = canvasH * 0.5;
+}
+
+function keyDownHandler(event) {
+  if (event.key === "w") blueUp = true;
+  if (event.key === "s") blueDown = true;
+  if (event.key === "a") blueLeft = true;
+  if (event.key === "d") blueRight = true;
+
+  if (event.key === "i") redUp = true;
+  if (event.key === "k") redDown = true;
+  if (event.key === "j") redLeft = true;
+  if (event.key === "l") redRight = true;
+}
+
+function keyUpHandler(event) {
+  if (event.key === "w") blueUp = false;
+  if (event.key === "s") blueDown = false;
+  if (event.key === "a") blueLeft = false;
+  if (event.key === "d") blueRight = false;
+
+  if (event.key === "i") redUp = false;
+  if (event.key === "k") redDown = false;
+  if (event.key === "j") redLeft = false;
+  if (event.key === "l") redRight = false;
+}
+
+window.addEventListener("keydown", keyDownHandler);
+window.addEventListener("keyup", keyUpHandler);
