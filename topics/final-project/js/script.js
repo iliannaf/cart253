@@ -4,6 +4,7 @@
  *
  * 5 mini games that the user can choose from
  * Game 1: Starry Sky - Creating constellations
+ * Game 2: Air Hockey - A game of air hockey
  *
  */
 
