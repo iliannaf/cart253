@@ -86,6 +86,22 @@ let redRight = false;
 let game2score1;
 let game2score2;
 
+// Game 3
+let board = [
+  ["", "", ""],
+  ["", "", ""],
+  ["", "", ""]
+];
+
+let currentPlayer = "X";
+let game3winner = "";
+let game3gameOver = false;
+
+let boardSize = 300;
+let cellSize = boardSize / 3;
+let boardX = canvasW / 2 - boardSize / 2;
+let boardY = canvasH / 2 - boardSize / 2;
+
 // SET UP
 function setup() {
   createCanvas(canvasW, canvasH);
@@ -191,7 +207,6 @@ function startGame1() {
 }
 
 // GAME 2
-
 function game2Page() {
   background("silver");
 
@@ -237,10 +252,70 @@ function game2Page() {
 }
 
 // Game 3
+
 function game3Page() {
-  background("yellow");
-  text("Game 3", canvasW / 2, canvasH / 2);
+  background("lightyellow");
+
+  // Instructions
+  textAlign(CENTER, CENTER);
+  fill("black");
+  textSize(20);
+
+  if (game3winner !== "") {
+    text(game3winner + " wins!", canvasW / 2, canvasH * 0.1);
+  } else if (game3gameOver) {
+    text("Tied", canvasW / 2, canvasH * 0.1);
+  } else {
+    text("Player " + currentPlayer + "'s turn", canvasW / 2, canvasH * 0.1);
+  }
+
+  // Draw grid
+  stroke("black");
+  strokeWeight(5);
+
+  for (let i = 1; i < 3; i++) {
+    line(
+      boardX + i * cellSize,
+      boardY,
+      boardX + i * cellSize,
+      boardY + boardSize
+    );
+
+    line(
+      boardX,
+      boardY + i * cellSize,
+      boardX + boardSize,
+      boardY + i * cellSize
+    );
+  }
+
+  // Draw Xs and Os
+  textSize(75);
+  textAlign(CENTER, CENTER);
+  noStroke();
+
+  for (let row = 0; row < 3; row++) {
+    for (let col = 0; col < 3; col++) {
+      if (board[row][col] === "X") {
+        fill("blue");
+      } else {
+        fill("red");
+      }
+
+      text(
+        board[row][col],
+        boardX + col * cellSize + cellSize / 2,
+        boardY + row * cellSize + cellSize / 2
+      );
+    }
+  }
+
+  // Instructions at bottom
+  fill("black");
+  textSize(20);
+  text("Click a square to play | SPACE to restart | H for home", canvasW / 2, canvasH * 0.9);
 }
+
 
 // Game 4
 function game4Page() {
