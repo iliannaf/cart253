@@ -122,15 +122,15 @@ function menuPage() {
 
   // write instructions
   textAlign(CENTER, CENTER);
-  textSize(35);
+  textSize(45);
   fill(0);
-  text("Mini Games", canvasW / 2, canvasH * 0.15);
+  text("Mini Games", canvasW / 2, canvasH * 0.17);
   textSize(25);
-  text("Pick a game by clicking on a button.", canvasW / 2, canvasH * 0.3);
+  text("Pick a game by clicking on a button.", canvasW / 2, canvasH * 0.38);
   text(
     "Once you're in a game, press H to get back to the home menu.",
     canvasW / 2,
-    canvasH * 0.37,
+    canvasH * 0.45,
   );
 
   // make buttons to start games
@@ -260,12 +260,12 @@ function game2Page() {
 // Game 3
 
 function game3Page() {
-  background("lightyellow");
+  background("thistle");
 
   // Instructions
   textAlign(CENTER, CENTER);
   fill("black");
-  textSize(20);
+  textSize(25);
 
   if (game3winner !== "") {
     text(game3winner + " wins!", canvasW / 2, canvasH * 0.1);
@@ -320,7 +320,7 @@ function game3Page() {
   fill("black");
   textSize(20);
   text(
-    "Click a square to play. Press SPACE to restart. Press H to go to menu.",
+    "Click a square to play. Press SPACE to restart.",
     canvasW / 2,
     canvasH * 0.9,
   );
@@ -508,8 +508,8 @@ function movePuck() {
     puck.speedX *= -1;
   }
 
-  if (puck.y < puck.size / 2 + 30) {
-    puck.y = puck.size / 2 + 30;
+  if (puck.y < puck.size / 2) {
+    puck.y = puck.size / 2;
     puck.speedY *= -1;
   }
 
@@ -612,7 +612,7 @@ function constrainPlayersGame2() {
 
   game2player1.y = constrain(
     game2player1.y,
-    30 + game2player1.size / 2,
+    game2player1.size / 2,
     canvasH - game2player1.size / 2,
   );
 
@@ -625,7 +625,7 @@ function constrainPlayersGame2() {
 
   game2player2.y = constrain(
     game2player2.y,
-    30 + game2player2.size / 2,
+    game2player2.size / 2,
     canvasH - game2player2.size / 2,
   );
 }
