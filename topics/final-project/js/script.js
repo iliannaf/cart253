@@ -120,6 +120,9 @@ function setup() {
 function menuPage() {
   background("lightblue");
   fill("slategray");
+  stroke("slategray");
+  strokeWeight(7);
+  line(canvasW * 0.375, canvasH * 0.22, canvasW * 0.625, canvasH * 0.22);
   noStroke();
   rect(0, 0, canvasW, canvasH * 0.04);
   rect(0, canvasH - canvasH * 0.04, canvasW, canvasH * 0.04);
