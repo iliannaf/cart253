@@ -5,6 +5,7 @@
  * 5 mini games that the user can choose from
  * Game 1: Starry Sky - Creating constellations
  * Game 2: Air Hockey - A game of air hockey
+ * Game 3: TicTacToe - A game of TicTacToe
  *
  */
 
@@ -123,9 +124,14 @@ function menuPage() {
   textAlign(CENTER, CENTER);
   textSize(35);
   fill(0);
-  text("Title", canvasW / 2, canvasH * 0.15);
+  text("Mini Games", canvasW / 2, canvasH * 0.15);
   textSize(25);
-  text("Pick a game", canvasW / 2, canvasH * 0.3);
+  text("Pick a game by clicking on a button.", canvasW / 2, canvasH * 0.3);
+  text(
+    "Once you're in a game, press H to get back to the home menu.",
+    canvasW / 2,
+    canvasH * 0.37,
+  );
 
   // make buttons to start games
   fill(0);
@@ -314,7 +320,7 @@ function game3Page() {
   fill("black");
   textSize(20);
   text(
-    "Click a square to play | SPACE to restart | H for home",
+    "Click a square to play. Press SPACE to restart. Press H to go to menu.",
     canvasW / 2,
     canvasH * 0.9,
   );
@@ -447,11 +453,11 @@ function keyPressed() {
 function game2instructions() {
   fill("black");
   textSize(18);
-  text("Team 1:", canvasW * 0.055, canvasH * 0.05);
-  text(game2score1, canvasW * 0.098, canvasH * 0.05);
+  text("Blue Team:", canvasW * 0.06, canvasH * 0.05);
+  text(game2score1, canvasW * 0.11, canvasH * 0.05);
   text("WASD to move", canvasW * 0.07, canvasH * 0.088);
-  text("Team 2:", canvasW * 0.92, canvasH * 0.05);
-  text(game2score2, canvasW * 0.96, canvasH * 0.05);
+  text("Red Team:", canvasW * 0.924, canvasH * 0.05);
+  text(game2score2, canvasW * 0.97, canvasH * 0.05);
   text("IJKL to move", canvasW * 0.931, canvasH * 0.088);
 }
 
@@ -584,15 +590,15 @@ function game2win() {
 
     if (game2score1 >= 5) {
       fill("blue");
-      text("Team 1 Wins!", canvasW / 2, canvasH / 2 - 30);
+      text("Blue Team Wins!", canvasW / 2, canvasH / 2 - 30);
     } else {
       fill("red");
-      text("Team 2 Wins!", canvasW / 2, canvasH / 2 - 30);
+      text("Red Team Wins!", canvasW / 2, canvasH / 2 - 30);
     }
 
     fill("white");
     textSize(22);
-    text("Press SPACE to play again", canvasW / 2, canvasH / 2 + 35);
+    text("Press SPACE to play again.", canvasW / 2, canvasH / 2 + 35);
   }
 }
 
