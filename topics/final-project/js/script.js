@@ -90,7 +90,7 @@ let game2score2;
 let board = [
   ["", "", ""],
   ["", "", ""],
-  ["", "", ""]
+  ["", "", ""],
 ];
 
 let currentPlayer = "X";
@@ -242,7 +242,7 @@ function game2Page() {
   movePuck();
   drawGame2Player1();
   drawGame2Player2();
-  constrainPlayersGame2()
+  constrainPlayersGame2();
   drawPuck();
   drawTarget();
   drawTarget2();
@@ -278,14 +278,14 @@ function game3Page() {
       boardX + i * cellSize,
       boardY,
       boardX + i * cellSize,
-      boardY + boardSize
+      boardY + boardSize,
     );
 
     line(
       boardX,
       boardY + i * cellSize,
       boardX + boardSize,
-      boardY + i * cellSize
+      boardY + i * cellSize,
     );
   }
 
@@ -305,7 +305,7 @@ function game3Page() {
       text(
         board[row][col],
         boardX + col * cellSize + cellSize / 2,
-        boardY + row * cellSize + cellSize / 2
+        boardY + row * cellSize + cellSize / 2,
       );
     }
   }
@@ -313,9 +313,12 @@ function game3Page() {
   // Instructions at bottom
   fill("black");
   textSize(20);
-  text("Click a square to play | SPACE to restart | H for home", canvasW / 2, canvasH * 0.9);
+  text(
+    "Click a square to play | SPACE to restart | H for home",
+    canvasW / 2,
+    canvasH * 0.9,
+  );
 }
-
 
 // Game 4
 function game4Page() {
@@ -394,9 +397,7 @@ function mousePressed() {
         break;
       }
     }
-  }
-
-  else if (currentPage === "game3") {
+  } else if (currentPage === "game3") {
     game3mousePressed();
   }
 }
@@ -487,7 +488,6 @@ function movePuck() {
   puck.speedX *= puck.friction;
   puck.speedY *= puck.friction;
 
-  // Stop very small movements
   if (abs(puck.speedX) < 0.1) puck.speedX = 0;
   if (abs(puck.speedY) < 0.1) puck.speedY = 0;
 
@@ -517,7 +517,6 @@ function playerHitsPuck(player) {
   let d = dist(player.x, player.y, puck.x, puck.y);
 
   if (d < player.size / 2 + puck.size / 2) {
-
     // Find direction from player to puck
     let angle = atan2(puck.y - player.y, puck.x - player.x);
 
@@ -550,12 +549,7 @@ function drawTarget2() {
 }
 
 function game2checkGoal() {
-  const d = dist(
-    puck.x,
-    puck.y,
-    game2target.x,
-    game2target.y
-  );
+  const d = dist(puck.x, puck.y, game2target.x, game2target.y);
 
   const overlap = d < game2target.size / 2 + puck.size / 2;
 
@@ -567,12 +561,7 @@ function game2checkGoal() {
 }
 
 function game2checkGoal2() {
-  const d = dist(
-    puck.x,
-    puck.y,
-    game2target2.x,
-    game2target2.y
-  );
+  const d = dist(puck.x, puck.y, game2target2.x, game2target2.y);
 
   const overlap = d < game2target2.size / 2 + puck.size / 2;
 
@@ -582,7 +571,6 @@ function game2checkGoal2() {
     resetGame2();
   }
 }
-
 
 function game2win() {
   if (game2score1 >= 5 || game2score2 >= 5) {
@@ -608,32 +596,31 @@ function game2win() {
   }
 }
 
-
 function constrainPlayersGame2() {
   // Keep red player inside the canvas
   game2player1.x = constrain(
     game2player1.x,
     game2player1.size / 2,
-    canvasW - game2player1.size / 2
+    canvasW - game2player1.size / 2,
   );
 
   game2player1.y = constrain(
     game2player1.y,
     30 + game2player1.size / 2,
-    canvasH - game2player1.size / 2
+    canvasH - game2player1.size / 2,
   );
 
   // Keep blue player inside the canvas
   game2player2.x = constrain(
     game2player2.x,
     game2player2.size / 2,
-    canvasW - game2player2.size / 2
+    canvasW - game2player2.size / 2,
   );
 
   game2player2.y = constrain(
     game2player2.y,
     30 + game2player2.size / 2,
-    canvasH - game2player2.size / 2
+    canvasH - game2player2.size / 2,
   );
 }
 
@@ -772,7 +759,7 @@ function restartGame3() {
   board = [
     ["", "", ""],
     ["", "", ""],
-    ["", "", ""]
+    ["", "", ""],
   ];
 
   currentPlayer = "X";
