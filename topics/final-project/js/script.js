@@ -119,6 +119,10 @@ function setup() {
 
 function menuPage() {
   background("lightblue");
+  fill("slategray");
+  noStroke();
+  rect(0, 0, canvasW, canvasH * 0.04);
+  rect(0, canvasH - canvasH * 0.04, canvasW, canvasH * 0.04);
 
   // write instructions
   textAlign(CENTER, CENTER);
